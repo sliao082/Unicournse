@@ -1,0 +1,90 @@
+.comments-container {
+    width: 86%;
+    padding: 20px 0;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.comment-card {
+    width: 48%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background: var(--card-background-color);
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 2%;
+    margin-bottom: 30px;
+    box-shadow: 6px 6px 12px var(--shadow-color), -6px -6px 12px #fff;
+    transition: 0.25s ease;
+}
+
+.comment-card:hover {
+    box-shadow: 8px 8px 16px var(--shadow-color), -8px -8px 16px #fff;
+}
+
+.course-header {
+    margin-bottom: 15px;
+}
+
+.course-code {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.course-title {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+}
+
+.comment-text {
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.comment-date {
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
+}
+
+.comment-actions {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.icon-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: var(--card-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px var(--shadow-color), -3px -3px 6px #fff;
+    transition: 0.25s ease;
+}
+
+.icon-button:hover {
+    box-shadow: 3px 3px 6px #fff, -3px -3px 6px var(--shadow-color);
+    background: var(--button-color);
+}
+
+.icon-button:hover svg {
+    fill: #fff;
+}
+
+.icon-button svg {
+    width: 20px;
+    height: 20px;
+    transition: .25s ease;
+}

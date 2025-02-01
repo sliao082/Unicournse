@@ -1,0 +1,210 @@
+.settings-container {
+    width: 76%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.settings-container::-webkit-scrollbar {
+    display: none;
+}
+
+.settings-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.settings-header {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--shadow-color);
+
+    h2 {
+        font-size: 1.8rem;
+        color: var(--text-color);
+        margin: 20px 0;
+    }
+}
+
+.settings-section {
+    width: 90%;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: var(--card-background-color);
+    box-shadow: inset 4px 4px 8px var(--shadow-color),
+        inset -4px -4px 8px #fff;
+
+    &.danger-zone {
+        background: #ffe6e6;
+        box-shadow: inset 4px 4px 8px #ffb3b3, inset -4px -4px 8px #fff;
+    }
+}
+
+.section-title {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--shadow-color);
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: var(--card-background-color);
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px var(--shadow-color),
+        -4px -4px 8px #fff;
+
+    .item-content {
+        h4 {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 1.1rem;
+        }
+
+        p {
+            margin: 0.3rem 0 0 0;
+            color: var(--secondary-text-color);
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.profile-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2rem 0;
+
+    .avatar-wrapper {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #c5c5c5;
+        box-shadow: 6px 6px 12px var(--shadow-color), -6px -6px 12px #fff;
+        transition: .25s ease;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 6px 6px 12px #fff, -6px -6px 12px var(--shadow-color);
+
+            .upload-button {
+                box-shadow: 3px 3px 6px #fff, -3px -3px 6px var(--shadow-color);
+                transform: scale(1.1);
+            }
+        }
+
+        .upload-button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 36px;
+            height: 36px;
+            border: none;
+            border-radius: 50%;
+            background: var(--button-color);
+            box-shadow: 3px 3px 6px var(--shadow-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.25s ease;
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .profile-user {
+        margin-left: 2rem;
+
+        .profile-user-content {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+
+            p {
+                font-size: 1rem;
+                color: var(--secondary-text-color);
+                margin: 0.5rem 0;
+            }
+
+            input[type="text"] {
+                width: 200px;
+                height: 30px;
+                border: none;
+                border-radius: 5px;
+                background: var(--card-background-color);
+                border: none;
+                outline: none;
+                box-shadow: inset 3px 3px 6px var(--shadow-color), inset -3px -3px 6px #fff;
+                color: var(--text-color);
+                font-size: 1rem;
+                padding: 0 10px;
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    .profile-user-content {
+        display: flex;
+    }
+}
+
+.danger-button {
+    background: #ff4444;
+    color: white;
+    box-shadow: 3px 3px 6px #ff9999;
+
+    &:hover {
+        box-shadow: inset 3px 3px 6px #cc0000;
+    }
+}
+
+.neumorphic-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--card-background-color);
+        transition: .4s;
+        border-radius: 34px;
+        box-shadow: inset 4px 4px 8px var(--shadow-color),
+            inset -4px -4px 8px #fff;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            box-shadow: 2px 2px 4px var(--shadow-color);
+        }
+    }
+
+    input:checked+.slider {
+        background: var(--button-color);
+    }
+
+    input:checked+.slider:before {
+        transform: translateX(26px);
+    }
+}

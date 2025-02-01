@@ -1,0 +1,49 @@
+:root {
+	--background-color: linear-gradient(to bottom right, #e2ebfe, #edf5fd);
+	--card-background-color: linear-gradient(to bottom right, #f1f1fb, #ebebf9);
+	--text-color: #2f2e3f;
+	--secondary-text-color: #9a98b5;
+	--selected-color: #fffefe;
+	--shadow-color: #c2c0df;
+	--button-color: #fd553a;
+
+	--instagram-color: #e42d6b;
+	--twitter-color: #44b2d7;
+	--email-color: #f74737;
+	
+	--details-color-1: #ec7ada;
+	--details-color-2: #78bdff;
+	--details-color-3: #54c9a0;
+	--details-color-4: #8787e1;
+	--details-color-5: #46dde9;
+	--details-color-6: #f9a826;
+
+	--nav-bar-height: 15dvh;
+	--user-side-bar-width: 12%;
+	--user-schedule-height: 20px;
+	--user-schedule-gap: 6px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Mona Sans", serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.container {
+	width: 100dvw;
+	height: 100dvh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+    background: var(--background-color);
+	overflow: hidden;
+}

@@ -1,0 +1,191 @@
+.browse-main-subject-block {
+    width: 100%;
+    height: calc(100dvh - 80px - 60px);
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0 40px;
+    padding-bottom: 40px;
+}
+
+.browse-main-col-1 {
+    width: 42%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-left: 10px;
+}
+
+.browse-main-col-1::-webkit-scrollbar {
+    display: none;
+}
+
+.browse-main-col-1 {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.browse-main-code.clicked {
+    background: var(--button-color);
+    color: var(--selected-color);
+    box-shadow: 3px 3px 6px #fff, -3px -3px 6px var(--shadow-color);
+}
+
+/* .browse-main-code.unclicked {
+    background: var(--card-background-color);
+    color: var(--text-color);
+    box-shadow: 3px 3px 6px var(--shadow-color), -3px -3px 6px #fff;
+} */
+
+.browse-main-col-2 {
+    width: 58%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background: var(--card-background-color);
+    box-shadow: 6px 6px 20px var(--shadow-color), -6px -6px 20px #fff;
+    border-radius: 40px;
+    padding: 40px 30px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.browse-main-col-2 h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.browse-info-attr {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.browse-info-desc {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    box-shadow: inset 3px 3px 6px var(--shadow-color), inset -3px -3px 6px #fff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.browse-main-col-2 h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.browse-main-section-list {
+    width: 100%;
+    height: 56%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 8px;
+    overflow-y: scroll;
+}
+
+.browse-main-section-list::-webkit-scrollbar {
+    display: none;
+}
+
+.browse-main-section-list {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.browse-main-section-list-item {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background: var(--card-background-color);
+    box-shadow: 3px 3px 6px var(--shadow-color), -3px -3px 6px #fff;
+    border-radius: 8px;
+    flex-shrink: 0;
+    transition: .25s ease;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.browse-main-section-list-item > svg {
+    transition: .25s ease;
+}
+
+.browse-main-section-list-item:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 6px #fff, -3px -3px 6px var(--shadow-color);
+}
+
+.browse-main-section-list-item:hover > svg {
+    transform: translateX(10px);
+}
+
+.browse-main-section-list-item > * {
+    display: inline-block;
+    height: fit-content;
+    margin-inline: 2px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.browse-main-section-list-item > h4 {
+    width: calc(14% - 20px);
+}
+
+.browse-main-section-list-item > p {
+    width: calc(26% - 20px);
+}
+
+.browse-main-section-list-item > span {
+    width: calc(17% - 20px);
+}
+
+.browse-main-close-btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 6px var(--shadow-color), -3px -3px 6px #fff;
+    transition: .25s ease;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: none;
+}
+
+.browse-main-close-btn:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 6px #fff, -3px -3px 6px var(--shadow-color);
+    background-color: var(--button-color);
+}
+
+.browse-main-close-btn > svg {
+    transition: .25s ease;
+}
+
+.browse-main-close-btn:hover > svg {
+    fill: #fff;
+}

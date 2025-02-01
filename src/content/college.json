@@ -1,0 +1,98 @@
+[
+    {
+        "college": "Carle Illinois College of Medicine",
+        "abbr": "CIMED",
+        "color1": "#FFB528",
+        "color2": "#FFE84E"
+    },
+    {
+        "college": "College of Agricultural, Consumer & Environmental Sciences",
+        "abbr": "ACES",
+        "color1": "#B251BD",
+        "color2": "#C8768C"
+    },
+    {
+        "college": "College of Applied Health Sciences",
+        "abbr": "AHS",
+        "color1": "#F68080",
+        "color2": "#F9B16E"
+    },
+    {
+        "college": "College of Education",
+        "abbr": "EDUC",
+        "color1": "#67B9A4",
+        "color2": "#95F9C3"
+    },
+    {
+        "college": "College of Fine & Applied Arts",
+        "abbr": "FAA",
+        "color1": "#BD3658",
+        "color2": "#E3A69D"
+    },
+    {
+        "college": "College of Law",
+        "abbr": "LAW",
+        "color1": "#78bdff",
+        "color2": "#46dde9"
+    },
+    {
+        "college": "College of Liberal Arts & Sciences",
+        "abbr": "LAS",
+        "color1": "#78bdff",
+        "color2": "#46dde9"
+    },
+    {
+        "college": "College of Media",
+        "abbr": null,
+        "color1": "#78bdff",
+        "color2": "#46dde9"
+    },
+    {
+        "college": "College of Veterinary Medicine",
+        "abbr": "VetMed",
+        "color1": "#78bdff",
+        "color2": "#46dde9"
+    },
+    {
+        "college": "Division of General Studies",
+        "abbr": null,
+        "color1": "#78bdff",
+        "color2": "#46dde9"
+    },
+    {
+        "college": "Gies College of Business",
+        "abbr": "BUS",
+        "color1": "#78bdff",
+        "color2": "#46dde9"
+    },
+    {
+        "college": "Graduate College",
+        "abbr": null,
+        "color1": "#78bdff",
+        "color2": "#46dde9"
+    },
+    {
+        "college": "Grainger College of Engineering",
+        "abbr": "GCOE",
+        "color1": "#78bdff",
+        "color2": "#46dde9"
+    },
+    {
+        "college": "School of Social Work",
+        "abbr": "SSW",
+        "color1": "#78bdff",
+        "color2": "#46dde9"
+    },
+    {
+        "college": "School of Information Sciences",
+        "abbr": "iSchool",
+        "color1": "#78bdff",
+        "color2": "#46dde9"
+    },
+    {
+        "college": "School of Labor and Employment Relations",
+        "abbr": "LER",
+        "color1": "#78bdff",
+        "color2": "#46dde9"
+    }
+]

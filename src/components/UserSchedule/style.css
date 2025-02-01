@@ -1,0 +1,112 @@
+.user-schedule-block {
+    width: 76%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-schedule {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 5px 8px;
+    background: var(--card-background-color);
+    box-shadow: 6px 6px 20px var(--shadow-color), -6px -6px 20px #fff;
+}
+
+.schedule-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+
+.schedule-container::-webkit-scrollbar {
+    display: none;
+}
+
+.schedule-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+.days-header {
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: 0.4fr repeat(5, 1fr);
+    gap: 10px;
+    background: var(--card-background-color);
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.day-header {
+    padding: 15px;
+    text-align: center;
+    background: var(--card-background-color);
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px #fff;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 0.4fr repeat(5, 1fr);
+    gap: 10px;
+    position: relative;
+}
+
+.time-column {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, var(--user-schedule-height));
+    row-gap: var(--user-schedule-gap);
+    z-index: 1;
+}
+
+.time-slot-label {
+    height: var(--user-schedule-height);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    text-align: right;
+}
+
+.time-slot-label p {
+    color: var(--text-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.time-slot-label span {
+    color: var(--secondary-text-color);
+    font-size: 0.8rem;
+}
+
+.day-column {
+    position: relative;
+}
+
+.time-slot {
+    width: 100%;
+    border-radius: 6px;
+    transition: 0.25s ease;
+    position: absolute;
+    left: 0;
+    box-shadow: 2px 2px 4px var(--shadow-color), -2px -2px 4px #fff;
+}
+
+.time-slot:hover {
+    /* box-shadow: inset 2px 2px 4px var(--shadow-color), inset -2px -2px 4px #fff; */
+    cursor: pointer;
+}

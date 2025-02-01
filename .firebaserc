@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "unicournse",
+    "dev": "unicournse"
+  },
+  "targets": {},
+  "etags": {}
+}

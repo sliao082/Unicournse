@@ -1,0 +1,112 @@
+.user-container {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-color);
+}
+
+.user-side-bar {
+    width: var(--user-side-bar-width);
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: none;
+    position: relative;
+}
+
+.side-bar-logo {
+    width: 78px;
+    height: 78px;
+    background-image: url('');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    background-color: gray;
+    margin-top: 10px;
+    z-index: 2;
+}
+
+.side-bar-list {
+    width: 100%;
+    height: fit-content;
+    min-height: calc(80% - 78px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6dvh;
+    z-index: 3;
+}
+
+.side-bar-item {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+    margin: 2.4dvh 0;
+    text-align: right;
+    padding: 0 4px;
+    border-radius: 8px;
+    transform: translateX(36%);
+    backdrop-filter: blur(4px);
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.side-bar-item.selected {
+    background-color: #fd553a99;
+    box-shadow: inset 3px 3px 6px #a9311e66, inset -3px -3px 6px #ffcdc466;
+}
+
+.side-bar-item.selected svg {
+    fill: #fff;
+}
+
+.side-bar-item.selected p {
+    color: #fff;
+}
+
+.side-bar-item.unselected {
+    background-color: #fff0;
+    box-shadow: inset 3px 3px 6px #fff, inset -3px -3px 6px var(--shadow-color);
+}
+
+.side-bar-item.unselected:hover {
+    cursor: pointer;
+    background-color: #fd553a99;
+    box-shadow: inset 3px 3px 6px #a9311e66, inset -3px -3px 6px #ffcdc466;
+}
+
+.side-bar-item.unselected:hover svg {
+    fill: #fff;
+}
+
+.side-bar-item.unselected:hover p {
+    color: #fff;
+}
+
+.side-bar-item.unselected svg {
+    fill: var(--button-color);
+}
+
+.side-bar-item.unselected p {
+    color: var(--text-color);
+}
+
+.side-bar-item svg {
+    transition: .25s ease;
+}
+
+.side-bar-item p {
+    font-size: .9rem;
+    font-weight: 400;
+    margin-left: 4px;
+    transition: .25s ease;
+}

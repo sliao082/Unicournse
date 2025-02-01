@@ -1,0 +1,932 @@
+[
+    {
+        "code": "AAS",
+        "name": "Asian American Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ABE",
+        "name": "Agricultural and Biological Engineering",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "ACCY",
+        "name": "Accountancy",
+        "college": "Gies College of Business"
+    },
+    {
+        "code": "ACE",
+        "name": "Agricultural and Consumer Economics",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "ACES",
+        "name": "Agricultural, Consumer and Environmental Sciences",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "ADV",
+        "name": "Advertising",
+        "college": "College of Media"
+    },
+    {
+        "code": "AE",
+        "name": "Aerospace Engineering",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "AFAS",
+        "name": "Air Force Aerospace Studies",
+        "college": ""
+    },
+    {
+        "code": "AFRO",
+        "name": "African American Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "AFST",
+        "name": "African Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "AGCM",
+        "name": "Agricultural Communications",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "AGED",
+        "name": "Agricultural Education",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "AHS",
+        "name": "Applied Health Sciences Courses",
+        "college": "College of Applied Health Sciences"
+    },
+    {
+        "code": "AIS",
+        "name": "American Indian Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ALEC",
+        "name": "Agricultural Leadership, Education, and Communications Program",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "ANSC",
+        "name": "Animal Sciences",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "ANTH",
+        "name": "Anthropology",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ARAB",
+        "name": "Arabic",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ARCH",
+        "name": "Architecture",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "ART",
+        "name": "Art",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "ARTD",
+        "name": "Art--Design",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "ARTE",
+        "name": "Art--Education",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "ARTF",
+        "name": "Art--Foundation",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "ARTH",
+        "name": "Art--History",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "ARTJ",
+        "name": "Japanese Arts and Aesthetics",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "ARTS",
+        "name": "Art--Studio",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "ASRM",
+        "name": "Actuarial Science and Risk Management",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ASST",
+        "name": "Asian Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ASTR",
+        "name": "Astronomy",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ATMS",
+        "name": "Atmospheric Sciences",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "BADM",
+        "name": "Business Administration",
+        "college": "Gies College of Business"
+    },
+    {
+        "code": "BASQ",
+        "name": "Basque",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "BCOG",
+        "name": "Brain and Cognitive Science",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "BCS",
+        "name": "Bosnian-Croatian-Serbian",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "BDI",
+        "name": "Business Data and Innovation",
+        "college": "Gies College of Business"
+    },
+    {
+        "code": "BIOC",
+        "name": "Biochemistry",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "BIOE",
+        "name": "Bioengineering",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "BIOP",
+        "name": "Biophysics",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "BSE",
+        "name": "Biomedical Sciences and Engineering",
+        "college": "Carle Illinois College of Medicine"
+    },
+    {
+        "code": "BTW",
+        "name": "Business and Technical Writing",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "BUS",
+        "name": "Business",
+        "college": "Gies College of Business"
+    },
+    {
+        "code": "CB",
+        "name": "Comparative Biosciences",
+        "college": "College of Veterinary Medicine"
+    },
+    {
+        "code": "CDB",
+        "name": "Cell and Developmental Biology",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "CEE",
+        "name": "Civil and Environmental Engineering",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "CHBE",
+        "name": "Chemical and Biomolecular Engineering",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "CHEM",
+        "name": "Chemistry",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "CHIN",
+        "name": "Chinese",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "CHP",
+        "name": "Campus Honors Program Courses",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "CI",
+        "name": "Curriculum and Instruction",
+        "college": "College of Education"
+    },
+    {
+        "code": "CIC",
+        "name": "Committee on Inst Cooperation",
+        "college": "Graduate College"
+    },
+    {
+        "code": "CLCV",
+        "name": "Classical Civilization",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "CLE",
+        "name": "Clinical Sciences and Engineering",
+        "college": "Carle Illinois College of Medicine"
+    },
+    {
+        "code": "CMN",
+        "name": "Communication",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "CPSC",
+        "name": "Crop Sciences",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "CS",
+        "name": "Computer Science",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "CSE",
+        "name": "Computational Science and Engineering",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "CW",
+        "name": "Creative Writing",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "CWL",
+        "name": "Comparative and World Literature",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "CZCH",
+        "name": "Czech",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "DANC",
+        "name": "Dance",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "DTX",
+        "name": "Human-Centered Design and Design Thinking",
+        "college": "Gies College of Business"
+    },
+    {
+        "code": "EALC",
+        "name": "East Asian Language and Culture",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ECE",
+        "name": "Electrical and Computer Engineering",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "ECON",
+        "name": "Economics",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "EDPR",
+        "name": "Educational Practice",
+        "college": "College of Education"
+    },
+    {
+        "code": "EDUC",
+        "name": "Education",
+        "college": "College of Education"
+    },
+    {
+        "code": "EEB",
+        "name": "Evolution, Ecology, and Behavior",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "EIL",
+        "name": "English as an International Language",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ENG",
+        "name": "Engineering",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "ENGL",
+        "name": "English",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ENSU",
+        "name": "Environmental Sustainability",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ENT",
+        "name": "Entomology",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ENVS",
+        "name": "Environmental Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "EPOL",
+        "name": "Education Policy, Organization and Leadership",
+        "college": "College of Education"
+    },
+    {
+        "code": "EPSY",
+        "name": "Educational Psychology",
+        "college": "College of Education"
+    },
+    {
+        "code": "ERAM",
+        "name": "Education Research & Methods",
+        "college": "College of Education"
+    },
+    {
+        "code": "ESE",
+        "name": "Earth, Society, and Environment",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ESL",
+        "name": "English as a Second Language",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ETMA",
+        "name": "Engineering Technology and Management for Agricultural Systems",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "EURO",
+        "name": "European Union Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "FAA",
+        "name": "Fine and Applied Arts",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "FIN",
+        "name": "Finance",
+        "college": "Gies College of Business"
+    },
+    {
+        "code": "FLTE",
+        "name": "Foreign Language Teacher Education",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "FR",
+        "name": "French",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "FSHN",
+        "name": "Food Science and Human Nutrition",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "GC",
+        "name": "Graduate College",
+        "college": "Graduate College"
+    },
+    {
+        "code": "GEOL",
+        "name": "Geology",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "GER",
+        "name": "German",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "GGIS",
+        "name": "Geography & Geographic Information Science",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "GLBL",
+        "name": "Global Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "GMC",
+        "name": "Germanic",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "GRK",
+        "name": "Greek",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "GRKM",
+        "name": "Modern Greek",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "GS",
+        "name": "General Studies",
+        "college": "Division of General Studies"
+    },
+    {
+        "code": "GSD",
+        "name": "Game Studies and Design",
+        "college": "School of Information Sciences"
+    },
+    {
+        "code": "GWS",
+        "name": "Gender and Women's Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "HDFS",
+        "name": "Human Development and Family Studies",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "HEBR",
+        "name": "Hebrew, Modern and Classical",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "HIST",
+        "name": "History",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "HK",
+        "name": "Health and Kinesiology",
+        "college": "College of Applied Health Sciences"
+    },
+    {
+        "code": "HNDI",
+        "name": "Hindi",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "HORT",
+        "name": "Horticulture",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "HT",
+        "name": "Health Technology",
+        "college": "College of Applied Health Sciences"
+    },
+    {
+        "code": "HUM",
+        "name": "Humanities Courses",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "IB",
+        "name": "Integrative Biology",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "IE",
+        "name": "Industrial Engineering",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "INFO",
+        "name": "Informatics",
+        "college": "School of Information Sciences"
+    },
+    {
+        "code": "IS",
+        "name": "Information Sciences",
+        "college": "School of Information Sciences"
+    },
+    {
+        "code": "ITAL",
+        "name": "Italian",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "JAPN",
+        "name": "Japanese",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "JOUR",
+        "name": "Journalism",
+        "college": "College of Media"
+    },
+    {
+        "code": "JS",
+        "name": "Jewish Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "KOR",
+        "name": "Korean",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "LA",
+        "name": "Landscape Architecture",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "LAS",
+        "name": "Liberal Arts and Sciences",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "LAST",
+        "name": "Latin American and Caribbean Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "LAT",
+        "name": "Latin",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "LAW",
+        "name": "Law",
+        "college": "College of Law"
+    },
+    {
+        "code": "LCTL",
+        "name": "Less Commonly Taught Languages",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "LEAD",
+        "name": "Organizational and Community Leadership",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "LER",
+        "name": "Labor and Employment Relations",
+        "college": "School of Labor and Employment Relations"
+    },
+    {
+        "code": "LING",
+        "name": "Linguistics",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "LLS",
+        "name": "Latina/Latino Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "MACS",
+        "name": "Media and Cinema Studies",
+        "college": "College of Media"
+    },
+    {
+        "code": "MATH",
+        "name": "Mathematics",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "MBA",
+        "name": "Regular MBA Program Administration",
+        "college": "Gies College of Business"
+    },
+    {
+        "code": "MCB",
+        "name": "Molecular and Cell Biology",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "MDIA",
+        "name": "Media",
+        "college": "College of Media"
+    },
+    {
+        "code": "MDVL",
+        "name": "Medieval Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "ME",
+        "name": "Mechanical Engineering",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "MICR",
+        "name": "Microbiology",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "MILS",
+        "name": "Military Science",
+        "college": ""
+    },
+    {
+        "code": "MIP",
+        "name": "Molecular and Integrative Physiology",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "MSE",
+        "name": "Materials Science and Engineering",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "MUS",
+        "name": "Music",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "MUSC",
+        "name": "Music Lessons and Ensembles",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "MUSE",
+        "name": "Museum Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "NE",
+        "name": "Neural Engineering",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "NEUR",
+        "name": "Neuroscience",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "NPRE",
+        "name": "Nuclear, Plasma, and Radiological Engineering",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "NRES",
+        "name": "Natural Resources and Environmental Sciences",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "NS",
+        "name": "Naval Science",
+        "college": ""
+    },
+    {
+        "code": "NUTR",
+        "name": "Nutritional Sciences",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "PATH",
+        "name": "Pathobiology",
+        "college": "College of Veterinary Medicine"
+    },
+    {
+        "code": "PERS",
+        "name": "Persian",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "PHIL",
+        "name": "Philosophy",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "PHYS",
+        "name": "Physics",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "PLPA",
+        "name": "Plant Pathology",
+        "college": "College of Agricultural, Consumer & Environmental Sciences"
+    },
+    {
+        "code": "POL",
+        "name": "Polish",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "PORT",
+        "name": "Portuguese",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "PS",
+        "name": "Political Science",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "PSM",
+        "name": "Professional Science Master's Program",
+        "college": "Graduate College"
+    },
+    {
+        "code": "PSYC",
+        "name": "Psychology",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "QUEC",
+        "name": "Quechua",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "REES",
+        "name": "Russian, East European and Eurasian Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "REL",
+        "name": "Religion",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "RHET",
+        "name": "Rhetoric and Composition",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "RST",
+        "name": "Recreation, Sport, and Tourism",
+        "college": "College of Applied Health Sciences"
+    },
+    {
+        "code": "RUSS",
+        "name": "Russian",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "SAME",
+        "name": "South Asian and Middle Eastern Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "SBC",
+        "name": "Strategic Brand Communication",
+        "college": "College of Media"
+    },
+    {
+        "code": "SCAN",
+        "name": "Scandinavian",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "SE",
+        "name": "Systems Engineering and Design",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "SHS",
+        "name": "Speech and Hearing Science",
+        "college": "College of Applied Health Sciences"
+    },
+    {
+        "code": "SLAV",
+        "name": "Slavic",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "SLCL",
+        "name": "Literatures, Cultures, and Linguistics",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "SOC",
+        "name": "Sociology",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "SOCW",
+        "name": "Social Work",
+        "college": "School of Social Work"
+    },
+    {
+        "code": "SPAN",
+        "name": "Spanish",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "SPED",
+        "name": "Special Education",
+        "college": "College of Education"
+    },
+    {
+        "code": "STAT",
+        "name": "Statistics",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "SWAH",
+        "name": "Swahili",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "TAM",
+        "name": "Theoretical and Applied Mechanics",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "TE",
+        "name": "Technology Entrepreneurship",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "THEA",
+        "name": "Theatre",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "TMGT",
+        "name": "Technology and Management Courses",
+        "college": "Grainger College of Engineering"
+    },
+    {
+        "code": "TRST",
+        "name": "Translation Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "TURK",
+        "name": "Turkish",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "UKR",
+        "name": "Ukrainian",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "UP",
+        "name": "Urban and Regional Planning",
+        "college": "College of Fine & Applied Arts"
+    },
+    {
+        "code": "VCM",
+        "name": "Veterinary Clinical Medicine",
+        "college": "College of Veterinary Medicine"
+    },
+    {
+        "code": "VM",
+        "name": "Veterinary Medicine Courses",
+        "college": "College of Veterinary Medicine"
+    },
+    {
+        "code": "WGGP",
+        "name": "Women and Gender in Global Perspectives Program",
+        "college": "School of Social Work"
+    },
+    {
+        "code": "WLOF",
+        "name": "Wolof",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "WRIT",
+        "name": "Writing Studies",
+        "college": "College of Liberal Arts & Sciences"
+    },
+    {
+        "code": "YDSH",
+        "name": "Yiddish",
+        "college": "College of Liberal Arts & Sciences"
+    }
+]
