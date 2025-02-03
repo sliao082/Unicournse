@@ -43,11 +43,11 @@
 }
 
 .course-icon {
-    width: 42px;
+    aspect-ratio: 1 / 1;
     height: 70%;
     border-radius: 50%;
     box-shadow: 2px 2px 2px var(--shadow-color), -1px -1px 3px #fff;
-    margin-left: 15px;
+    margin-inline: 15px;
 }
 
 .course-details {
@@ -57,7 +57,6 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    margin-left: 15px;
 }
 
 .course-details h3 {

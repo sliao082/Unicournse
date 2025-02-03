@@ -12,6 +12,7 @@ import UserPage from './components/UserPage/UserPage';
 import UserProfile from './components/UserProfile/UserProfile';
 import UserSchedule from './components/UserSchedule/UserSchedule';
 import UserComments from './components/UserComments/UserComments';
+import UserCoursemates from './components/UserCoursemates/UserCoursemates';
 import UserSettings from './components/UserSettings/UserSettings';
 import ErrorBoundary from './ErrorBoundary';
 
@@ -33,7 +34,7 @@ createRoot(document.getElementById('root')).render(
 						<Route path=":id/profile" element={<UserProfile />} />
 						<Route path=":id/schedule" element={<UserSchedule />} />
 						<Route path=":id/comments" element={<UserComments />} />
-						<Route path=":id/coursemates" element={<UserProfile />} />
+						<Route path=":id/coursemates" element={<UserCoursemates />} />
 						<Route path=":id/settings" element={<UserSettings />} />
 					</Route>
 					{/* <Route path="*" element={<HomePage />} /> */}

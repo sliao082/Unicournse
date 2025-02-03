@@ -79,14 +79,6 @@ const UserProfile = () => {
                         <p>Email:</p>
                         <input type="text" placeholder='N/A'/>
                     </div>
-                    <div className="user-info-item" style={{ width: '46%', justifyContent: 'flex-end' }}>
-                        <label className="user-switch">
-                            <p>Visible to others</p>
-                            <input type="checkbox" />
-                            <span className="user-slider round"></span>
-                        </label>
-                        <button type="button" className='user-btn'>Save</button>
-                    </div>
                 </div>
                 <div className="user-main-courses">
                     <h2>Your Courses</h2>
