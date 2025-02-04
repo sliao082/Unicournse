@@ -15,27 +15,68 @@
     align-items: center;
 }
 
-.nav-bar-user > * {
-    margin-inline: 8px;
+.nav-bar-user > a {
+    text-decoration: none;
+    padding: 5px;
 }
 
-.nav-bar h1 {
+.nav-bar-user-icon {
+    height: 34px;
+    border-radius: 50%;
+}
+
+.nav-bar-user-name {
+    height: 50px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+
+    &:hover p {
+        cursor: pointer;
+        color: var(--text-color);
+    }
+
+    &:hover .user-img {
+        cursor: pointer;
+        box-shadow: 2px 2px 5px #fff, -2px -2px 5px var(--shadow-color);
+    }
+}
+
+.nav-bar-user-icon:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #fff, -2px -2px 5px var(--shadow-color);
+}
+
+.nav-bar-user > * {
+    margin-inline: 8px;
+    transition: .25s ease;
+}
+
+.nav-bar-user svg {
+    transition: .25s ease;
+}
+
+.nav-bar-user h1 {
     color: var(--text-color);
     font-size: 2.5rem;
     font-weight: 500;
 }
 
-.nav-bar p {
+.nav-bar-user p {
     color: var(--secondary-text-color);
     font-size: 0.9rem;
     font-weight: 400;
+    margin-right: 8px;
+    transition: .25s ease;
 }
 
-.nav-bar .user-img {
+.nav-bar-user .user-img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background: #c4c4c4;
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px var(--shadow-color);
+    transition: .25s ease;
 }
 
 .main-body {

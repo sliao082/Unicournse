@@ -168,6 +168,32 @@ app.get("/professor-rating", async (req, res) => {
     }
 });
 
+app.get("/courses", async (req, res) => {
+    try {
+        const coursesSnapshot = await getDocs(collection(db, "Courses"));
+        const courses = [];
+
+        coursesSnapshot.forEach(doc => {
+            const data = doc.data();
+            data.info.forEach(course => {
+                courses.push({
+                    subj: doc.id,
+                    code: course.code,
+                    name: course.name,
+                    credits: course.credits,
+                    gpa: course.gpa,
+                    sections: course.sections
+                });
+            });
+        });
+
+        res.json(courses);
+    } catch (error) {
+        console.error("❌ Error fetching courses:", error);
+        res.status(500).json({ error: "Failed to fetch courses" });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
