@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 
-file_path = '/Users/yixuan/Desktop/scratchs/uiuc-gpa-dataset-2020-current.csv'
+file_path = '/Users/yixuan/Desktop/Unjuanable/Github/Unicournse/backend/dataScript/uiuc-gpa-dataset-2020-current.csv'
 df = pd.read_csv(file_path)
 
 def calculate_gpa(row):
@@ -40,7 +40,7 @@ for (subject, number, title, instructor), group in grouped:
 json_data = json.dumps(data, indent=4)
 
 # Save to a JSON file
-output_file_path = '/Users/yixuan/Desktop/scratchs/uiuc-gpa-dataset-2020-current.json'
+output_file_path = '/Users/yixuan/Desktop/Unjuanable/Github/Unicournse/backend/dataScript/uiuc-gpa-dataset-2020-current.json'
 with open(output_file_path, 'w') as json_file:
     json_file.write(json_data)
 
