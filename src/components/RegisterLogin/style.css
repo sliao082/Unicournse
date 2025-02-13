@@ -1,0 +1,119 @@
+.register-block {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    background: #faf8f889;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    box-shadow: 8px 8px 16px var(--shadow-color), -8px -8px 16px #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.register-block h2 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.input-group {
+    width: 100%;
+    height: 40px;
+    padding: 12px;
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    background: var(--card-background-color);
+    font-size: 14px;
+    outline: none;
+    font-family: 'Mona Sans', sans-serif;
+    color: var(--text-color);
+    box-shadow: inset 4px 4px 8px var(--shadow-color), inset -4px -4px 8px #fff;
+}
+
+.input-group input::placeholder {
+    color: var(--secondary-text-color);
+}
+
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: var(--card-background-color);
+    font-size: 16px;
+    margin-top: 15px;
+    transition: 0.25s ease;
+    box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px #fff;
+}
+
+.register-btn:hover {
+    cursor: pointer;
+    box-shadow: -4px -4px 8px var(--shadow-color), 4px 4px 8px #fff;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--shadow-color);
+}
+
+.divider:not(:empty)::before {
+    margin-right: 10px;
+}
+
+.divider:not(:empty)::after {
+    margin-left: 10px;
+}
+
+.google-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: var(--card-background-color);
+    color: var(--email-color);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Mona Sans', sans-serif;
+    transition: 0.25s ease;
+    box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.google-btn:hover {
+    cursor: pointer;
+    box-shadow: -4px -4px 8px var(--shadow-color), 4px 4px 8px #fff;
+}
+
+
+.toggle-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.toggle-link a {
+    text-decoration: none;
+    color: var(--details-color-2);
+    font-weight: 500;
+    transition: 0.25s ease;
+}
+
+
+.toggle-link a:hover {
+    color: var(--details-color-4);
+}

@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 def scrape_professor(professor_name):
     url = f"https://www.ratemyprofessors.com/search/professors/1112?q={professor_name}"
+    print(url)
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
     professors = []
@@ -25,6 +26,9 @@ def get_professor():
     professor_name = request.args.get('name')
     if not professor_name:
         return jsonify({'error': 'Professor name is required'}), 400
+    if ',' in professor_name:
+        last_name, first_initial = professor_name.split(',')
+        professor_name = f"{first_initial.strip()} {last_name.strip()}"
     results = scrape_professor(professor_name)
     print(results)
     return jsonify(results)

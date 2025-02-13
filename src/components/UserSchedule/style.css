@@ -103,10 +103,27 @@
     transition: 0.25s ease;
     position: absolute;
     left: 0;
+    padding: 10px;
     box-shadow: 2px 2px 4px var(--shadow-color), -2px -2px 4px #fff;
 }
 
-.time-slot:hover {
-    /* box-shadow: inset 2px 2px 4px var(--shadow-color), inset -2px -2px 4px #fff; */
+/* .time-slot:hover {
+    box-shadow: inset 2px 2px 4px var(--shadow-color), inset -2px -2px 4px #fff;
     cursor: pointer;
+} */
+
+.course-schedule-details {
+    width: 100%;
+    height: 100%;
+}
+
+.course-schedule-details h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.course-schedule-details p {
+    font-size: 0.85rem;
+    color: var(--text-color);
 }

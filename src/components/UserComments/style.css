@@ -88,3 +88,92 @@
     height: 20px;
     transition: .25s ease;
 }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.neumorphic-modal {
+    background: var(--card-background-color);
+    border-radius: 20px;
+    box-shadow: 8px 8px 16px var(--shadow-color), -8px -8px 16px #ffffff;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+}
+
+.neumorphic-modal h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.neumorphic-modal h4 {
+    margin: 5px 0 15px;
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+}
+
+.neumorphic-modal textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 4px 4px 8px var(--shadow-color), inset -4px -4px 8px #ffffff;
+    resize: none;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: var(--text-color);
+    background: var(--card-background-color);
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    background: var(--card-background-color);
+    box-shadow: 3px 3px 6px var(--shadow-color), -3px -3px 6px #ffffff;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.modal-buttons button:hover {
+    box-shadow: inset 3px 3px 6px var(--shadow-color), inset -3px -3px 6px #ffffff;
+    background: var(--button-color);
+    color: #fff;
+}
+
+.no-info-text {
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--secondary-text-color);
+    width: 100%;
+}
+
+.no-info-text a {
+    color: var(--details-color-2);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.25s ease;
+}
+
+.no-info-text a:hover {
+    color: var(--details-color-4);
+}

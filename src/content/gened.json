@@ -1,0 +1,36 @@
+{
+    "Humanities and the Arts": [
+        {
+            "subject": "AAS",
+            "code": "101",
+            "name": "Asian American Studies",
+            "comments": {
+                "content": "Some comment on the course",
+                "url": "https://www.google.com"
+            }
+        },
+        {
+            "subject": "PSYC",
+            "code": "101",
+            "name": "Intro to Psychology",
+            "comments": {
+                "content": "Some comment on the course",
+                "url": "https://www.google.com"
+            }
+        }
+        ...
+    ],
+    "Social and Behavioral Science": [
+        {
+            "subject": "ECON",
+            "code": "101",
+            "name": "Intro to Economics",
+            "comments": {
+                "content": "Some comment on the course",
+                "url": "https://www.google.com"
+            }
+        }
+        ...
+    ],
+    ...
+}

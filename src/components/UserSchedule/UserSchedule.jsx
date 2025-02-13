@@ -1,22 +1,183 @@
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { onAuthStateChanged } from 'firebase/auth';
+import auth from '../../util/auth';
+import db from '../../util/db';
+import { doc, getDoc } from 'firebase/firestore';
+
 import './style.css'
 
 const UserSchedule = () => {
-    const generateTimeSlots = () => {
-        const times = [];
-        for (let hour = 8; hour <= 20; hour++) {
-            for (let minute = 0; minute < 60; minute += 15) {
-                const period = hour >= 12 ? 'PM' : 'AM';
-                const displayHour = hour % 12 || 12;
-                const time = `${displayHour}:${minute.toString().padStart(2, '0')} ${period}`;
-                times.push(time);
+    const [user, setUser] = useState(null);
+    const [profileData, setProfileData] = useState(null);
+    const [scheduleBlocks, setScheduleBlocks] = useState([]);
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+        });
+        return () => unsubscribe();
+    }, []);
+
+    useEffect(() => {
+        const fetchProfileData = async () => {
+            if (user) {
+                const userDocRef = doc(db, 'Users', user.uid);
+                const docSnap = await getDoc(userDocRef);
+                if (docSnap.exists()) {
+                    setProfileData(docSnap.data());
+                } else {
+                    console.error('No such document!');
+                }
             }
+        };
+
+        fetchProfileData();
+    }, [user]);
+
+    useEffect(() => {
+        async function computeScheduleBlocks() {
+            const blocks = [];
+            const colors = [
+                'var(--details-color-1)',
+                'var(--details-color-2)',
+                'var(--details-color-3)',
+                'var(--details-color-4)',
+                'var(--details-color-5)',
+                'var(--details-color-6)',
+            ];
+            if (profileData?.courses && profileData.courses.length > 0) {
+                for (let courseIndex = 0; courseIndex < profileData.courses.length; courseIndex++) {
+                    const course = profileData.courses[courseIndex];
+                    const backgroundColor = colors[courseIndex % colors.length];
+                    
+                    const [subject, courseNumStr] = course.course.split(' ');
+                    const courseNum = Number(courseNumStr);
+                    const courseDocRef = doc(db, 'Courses', subject);
+                    const courseDocSnap = await getDoc(courseDocRef);
+                    if (!courseDocSnap.exists()) continue;
+                    const courseData = courseDocSnap.data();
+                    const courseInfo = courseData.info.find(info => Number(info.code) === courseNum);
+                    if (!courseInfo || !courseInfo.sections) continue;
+                    
+                    if (course.sections && course.sections.length > 0) {
+                        for (const userSection of course.sections) {
+                            let matchingSection = null;
+                            for (const prof in courseInfo.sections) {
+                                const sectionList = courseInfo.sections[prof].sectionList;
+                                matchingSection = sectionList.find(sec =>
+                                    sec.code === userSection.code
+                                );
+                                if (matchingSection) break;
+                            }
+                            if (matchingSection) {
+                                const [startTimeStr, endTimeStr] = matchingSection.time.split(' - ').map(s => s.trim());
+                                const start = parseTime(startTimeStr);
+                                const end = parseTime(endTimeStr);
+                                const startTotalMinutes = start.hour * 60 + start.minute;
+                                const duration = (end.hour * 60 + end.minute) - startTotalMinutes;
+                                const topCalc = `calc(((${start.hour} + ${start.minute}/60 - 8) * 4 * (var(--user-schedule-height) + var(--user-schedule-gap)) + 0.5 * var(--user-schedule-height)))`;
+                                const heightCalc = `calc(100% * (${duration} / 780))`;
+                                const daysStr = matchingSection.days;
+                                for (const dayChar of daysStr.split('')) {
+                                    blocks.push({
+                                        courseName: course.course,
+                                        day: dayChar,
+                                        top: topCalc,
+                                        height: heightCalc,
+                                        time: matchingSection.time,
+                                        loc: matchingSection.loc,
+                                        room: matchingSection.room,
+                                        code: matchingSection.code,
+                                        backgroundColor: backgroundColor
+                                    });
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            setScheduleBlocks(blocks);
         }
-        return times;
+        computeScheduleBlocks();
+    }, [profileData]);
+
+    const parseTime = (timeStr) => {
+        const [time, period] = timeStr.split(' ');
+        let [hour, minute] = time.split(':').map(Number);
+        if (period === 'PM' && hour !== 12) hour += 12;
+        if (period === 'AM' && hour === 12) hour = 0;
+        return { hour, minute };
     };
 
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-    const times = generateTimeSlots();
-    console.log(times);
+    const times = [];
+    for (let hour = 8; hour <= 20; hour++) {
+        for (let minute = 0; minute < 60; minute += 15) {
+            const period = hour >= 12 ? 'PM' : 'AM';
+            const displayHour = hour % 12 || 12;
+            const timeStr = `${displayHour}:${minute.toString().padStart(2, '0')} ${period}`;
+            times.push(timeStr);
+        }
+    }
+
+    const handleCourseListItemClick = (e) => {
+        const courseItem = e.currentTarget;
+        const isAlreadyClicked = courseItem.classList.contains('clicked');
+
+        if (isAlreadyClicked) {
+            courseItem.classList.remove('clicked');
+            courseItem.classList.add('unclicked');
+        } else {
+            const allCourseItems = document.querySelectorAll('.course-list-item');
+            allCourseItems.forEach(item => {
+                item.classList.remove('clicked');
+                item.classList.add('unclicked');
+            });
+            courseItem.classList.remove('unclicked');
+            courseItem.classList.add('clicked');
+        }
+
+        const sectionCode = courseItem.getAttribute('data-code');
+        const courseNameElement = courseItem.querySelector('.course-details h3');
+        const courseName = courseNameElement ? courseNameElement.innerText.trim() : '';
+        const timeSlots = document.querySelectorAll('.time-slot');
+
+        if (courseItem.classList.contains('clicked')) {
+            timeSlots.forEach(slot => {
+                const slotCode = slot.getAttribute('data-code');
+                const slotCourseNameElement = slot.querySelector('.course-schedule-details h3');
+                const slotCourseName = slotCourseNameElement ? slotCourseNameElement.innerText.trim() : '';
+
+                if (slotCode === sectionCode && slotCourseName === courseName) {
+                    slot.style.transform = 'scale(1.1)';
+                    slot.style.boxShadow = '3px 3px 6px var(--shadow-color), -3px -3px 6px #fff';
+                } else {
+                    slot.style.transform = '';
+                    slot.style.boxShadow = '2px 2px 4px var(--shadow-color), -2px -2px 4px #fff';
+                }
+            });
+        } else {
+            timeSlots.forEach(slot => {
+                const slotCode = slot.getAttribute('data-code');
+                const slotCourseNameElement = slot.querySelector('.course-schedule-details h3');
+                const slotCourseName = slotCourseNameElement ? slotCourseNameElement.innerText.trim() : '';
+                if (slotCode === sectionCode && slotCourseName === courseName) {
+                    slot.style.transform = '';
+                    slot.style.boxShadow = '2px 2px 4px var(--shadow-color), -2px -2px 4px #fff';
+                }
+            });
+        }
+    };
+
+    if (!user) {
+        return (
+            <div className="user-main-block">
+                <p>No user signed in</p>
+            </div>
+        );
+    }
+
     return (
         <>
             <div className="user-main-block">
@@ -40,62 +201,60 @@ const UserSchedule = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div className="day-column">
-                                <div className="time-slot" style={{ height: 'calc(100% * (75 / 780))', backgroundColor: 'var(--details-color-1)', top: 'calc((12 - 8) * 4 * (var(--user-schedule-height) + var(--user-schedule-gap)) + 0.5 * var(--user-schedule-height))' }} data-time="8:00 AM" data-day="M"></div>
-                            </div>
-                            <div className="day-column">
-                                <div className="time-slot" style={{ height: 'calc(100% * (50 / 780))', backgroundColor: 'var(--details-color-2)', top: 'calc((9.5 - 8) * 4 * (var(--user-schedule-height) + var(--user-schedule-gap)) + 0.5 * var(--user-schedule-height))' }} data-time="8:00 AM" data-day="T"></div>
-                            </div>
-                            <div className="day-column">
-                                <div className="time-slot" style={{ height: 'calc(100% * (75 / 780))', backgroundColor: 'var(--details-color-3)', top: 'calc((11 - 8) * 4 * (var(--user-schedule-height) + var(--user-schedule-gap)) + 0.5 * var(--user-schedule-height))' }} data-time="8:00 AM" data-day="W"></div>
-                            </div>
-                            <div className="day-column">
-                                <div className="time-slot" style={{ height: 'calc(100% * (50 / 780))', backgroundColor: 'var(--details-color-2)', top: 'calc((9.5 - 8) * 4 * (var(--user-schedule-height) + var(--user-schedule-gap)) + 0.5 * var(--user-schedule-height))' }} data-time="8:00 AM" data-day="R"></div>
-                            </div>
-                            <div className="day-column">
-                                <div className="time-slot" style={{ height: 'calc(100% * (75 / 780))', backgroundColor: 'var(--details-color-3)', top: 'calc((11 - 8) * 4 * (var(--user-schedule-height) + var(--user-schedule-gap)) + 0.5 * var(--user-schedule-height))' }} data-time="8:00 AM" data-day="F"></div>
-                            </div>
+                            {['M', 'T', 'W', 'R', 'F'].map(dayLetter => (
+                                <div key={dayLetter} className="day-column">
+                                    {scheduleBlocks
+                                        .filter(block => block.day === dayLetter)
+                                        .map((block, i) => (
+                                            <div key={i} className="time-slot" style={{ height: block.height, top: block.top, backgroundColor: block.backgroundColor }} data-time={block.time} data-loc={block.loc} data-room={block.room} data-day={block.day} data-code={block.code}>
+                                                <div className="course-schedule-details">
+                                                    <h3>{block.courseName}</h3>
+                                                    <p>
+                                                        {block.room} {block.loc}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
                 <div className="user-side-info-block">
-                    <h2>Course List</h2>
+                    <h2>Your Sections</h2>
                     <div className="user-side-info">
-                        <div className="course-list-item" style={{ width: '92%', marginTop: '3dvh' }}>
-                            <div className="course-icon"></div>
-                            <div className="course-details">
-                                <h3>Bayes Theorem</h3>
-                                <p>STAT 431</p>
-                            </div>
-                        </div>
-                        <div className="course-list-item" style={{ width: '92%', marginTop: '3dvh' }}>
-                            <div className="course-icon"></div>
-                            <div className="course-details">
-                                <h3>Bayes Theorem</h3>
-                                <p>STAT 431</p>
-                            </div>
-                        </div>
-                        <div className="course-list-item" style={{ width: '92%', marginTop: '3dvh' }}>
-                            <div className="course-icon"></div>
-                            <div className="course-details">
-                                <h3>Bayes Theorem</h3>
-                                <p>STAT 431</p>
-                            </div>
-                        </div>
-                        <div className="course-list-item" style={{ width: '92%', marginTop: '3dvh' }}>
-                            <div className="course-icon"></div>
-                            <div className="course-details">
-                                <h3>Bayes Theorem</h3>
-                                <p>STAT 431</p>
-                            </div>
-                        </div>
-                        <div className="course-list-item" style={{ width: '92%', marginTop: '3dvh' }}>
-                            <div className="course-icon"></div>
-                            <div className="course-details">
-                                <h3>Bayes Theorem</h3>
-                                <p>STAT 431</p>
-                            </div>
-                        </div>
+                        {profileData?.courses && profileData.courses.length > 0 ? (
+                            profileData.courses.flatMap((course, courseIndex) => {
+                                if (course.sections && course.sections.length > 0) {
+                                    return course.sections.map((section, secIndex) => (
+                                        <div key={`${courseIndex}-${secIndex}`} className="course-list-item unclicked" style={{ width: '92%', marginTop: '3dvh' }} data-code={section.code} onClick={handleCourseListItemClick}>
+                                            <div className="course-icon"></div>
+                                            <div className="course-details">
+                                                <h3>{course.course}</h3>
+                                                <p>
+                                                    {section.code} <b>|</b> {section.type}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ));
+                                } else {
+                                    return (
+                                        <div key={courseIndex} className="course-list-item" style={{ width: '92%', marginTop: '3dvh' }}>
+                                            <div className="course-icon"></div>
+                                            <div className="course-details">
+                                                <h3>{course.course}</h3>
+                                                <p>No sections available</p>
+                                            </div>
+                                        </div>
+                                    );
+                                }
+                            })
+                        ) : (
+                            <p className='no-info-text' style={{ textAlign: 'center', fontSize: '.9rem', marginTop: '2dvh' }}>
+                                You haven't added any courses yet.
+                            </p>
+                        )}
                     </div>
                 </div>
             </div>

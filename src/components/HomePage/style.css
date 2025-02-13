@@ -15,7 +15,7 @@
     align-items: center;
 }
 
-.nav-bar-user > a {
+.nav-bar-user>a {
     text-decoration: none;
     padding: 5px;
 }
@@ -47,7 +47,7 @@
     box-shadow: 2px 2px 5px #fff, -2px -2px 5px var(--shadow-color);
 }
 
-.nav-bar-user > * {
+.nav-bar-user>* {
     margin-inline: 8px;
     transition: .25s ease;
 }
@@ -99,7 +99,7 @@
     scrollbar-width: none;
 }
 
-.test{
+.test {
     width: 100%;
     height: 50%;
     flex-shrink: 0;
@@ -285,30 +285,51 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
     margin: 30px 0;
 }
 
 .browse-subjects-card {
     width: 22%;
-    height: 120px;
+    height: fit-content;
     border-radius: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
     box-shadow: 5px 5px 10px var(--shadow-color), -5px -5px 10px #fff;
     background: var(--card-background-color);
-    padding: 8px;
+    padding: 50px 10px 15px 15px;
     transition: .25s ease;
+    text-decoration: none;
     position: relative;
 }
+
+.browse-subjects-card-delete-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--card-background-color);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 2px 2px 5px var(--shadow-color), -2px -2px 5px #fff;
+    transition: .25s ease;
+}
+
+.browse-subjects-card-delete-button:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #fff, -2px -2px 5px var(--shadow-color);
+}
+
 
 .browse-subjects-card:hover {
     cursor: pointer;
     box-shadow: 5px 5px 10px #fff, -5px -5px 10px var(--shadow-color);
 }
 
-.browse-subjects-card:hover > .browse-subjects-card-circle {
+.browse-subjects-card:hover>.browse-subjects-card-circle {
     box-shadow: 4px 4px 10px #fff, -4px -4px 10px var(--shadow-color);
 }
 
@@ -334,17 +355,14 @@
     backdrop-filter: blur(8px);
 }
 
-.browse-subjects-card p {
+.browse-subjects-card-text {
     color: var(--text-color);
     font-size: 0.9rem;
     font-weight: 400;
     text-align: left;
-    position: absolute;
-    bottom: 30px;
-    left: 10px;
 }
 
-.browse-subjects-card p span {
+.browse-subjects-card-text span {
     color: var(--secondary-text-color);
     font-size: 0.8rem;
     font-weight: 400;
@@ -366,6 +384,7 @@
     text-align: center;
     font-size: 1rem;
     font-weight: 400;
+    font-family: 'Mona Sans', sans-serif;
     cursor: pointer;
     box-shadow: 6px 6px 12px var(--shadow-color), -6px -6px 12px #fff;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
@@ -373,4 +392,169 @@
 
 .neu-button:hover {
     box-shadow: 6px 6px 12px #fff, -6px -6px 12px var(--shadow-color);
+}
+
+.browse-geneds {
+    width: 100%;
+    padding: 2vh 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3dvh 0;
+}
+
+.browse-geneds h1 {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.geneds-cards-container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    margin: 30px 0;
+}
+
+.geneds-cards {
+    width: 150%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.geneds-card-block {
+    width: 30%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.geneds-card {
+    width: 100%;
+    height: 100%;
+    background: #ededfa77;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    box-shadow: 4px 4px 10px var(--shadow-color), -4px -4px 10px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.geneds-card-block:nth-of-type(1) .geneds-card,
+.geneds-card-block:nth-of-type(3) .geneds-card {
+    background: #d0d0d078;
+    color: var(--secondary-text-color);
+}
+
+.geneds-card-block svg {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 3px 3px 6px var(--shadow-color), -3px -3px 6px #fff;
+    z-index: 0;
+}
+
+.geneds-card-block svg.first {
+    left: -25px;
+    top: -15px;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+
+.geneds-card-block svg.second {
+    right: -28px;
+    bottom: -18px;
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+}
+
+.feature-block {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin: 2dvh 0;
+    padding: 2dvh 3dvw;
+}
+
+.feature-title {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 3%;
+}
+
+.feature-img {
+    width: 30%;
+    height: 12dvw;
+    aspect-ratio: 3 / 2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px #fff;
+}
+
+.feature-title h1 {
+    display: inline-block;
+    width: 80%;
+    padding: 3dvw 0;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(10px);
+}
+
+.join-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 8dvh;
+}
+
+.join-buttons::before, .join-buttons::after {
+    content: '';
+    flex: 0 0 20%;
+    height: 1px;
+    background: var(--shadow-color);
+}
+
+.join-buttons:not(:empty)::before {
+    margin-right: 10px;
+}
+
+.join-buttons:not(:empty)::after {
+    margin-left: 10px;
 }

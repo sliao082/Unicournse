@@ -7,13 +7,16 @@ import HomePage from './components/HomePage/HomePage'
 import BrowsePage from './components/BrowsePage/BrowsePage'
 import BrowseSubject from './components/BrowseSubject/BrowseSubject';
 import BrowseCourse from './components/BrowseCourse/BrowseCourse';
-import BrowseSection from './components/BrowseSection/BrowseSection';
+import BrowseDetails from './components/BrowseDetails/BrowseDetails';
 import UserPage from './components/UserPage/UserPage';
 import UserProfile from './components/UserProfile/UserProfile';
 import UserSchedule from './components/UserSchedule/UserSchedule';
 import UserComments from './components/UserComments/UserComments';
 import UserCoursemates from './components/UserCoursemates/UserCoursemates';
 import UserSettings from './components/UserSettings/UserSettings';
+import RegisterPage from './components/RegisterPage/RegisterPage'
+import RegisterLogin from './components/RegisterLogin/RegisterLogin'
+import RegisterSignup from './components/RegisterSignup/RegisterSignup'
 import ErrorBoundary from './ErrorBoundary';
 
 import './index.css'
@@ -28,7 +31,7 @@ createRoot(document.getElementById('root')).render(
 					<Route path="/browse" element={<BrowsePage />}>
 						<Route index element={<BrowseSubject />} />
 						<Route path="subject/:subj" element={<BrowseCourse />} />
-						<Route path="subject/:subj/:code/:sect" element={<BrowseSection />} />
+						<Route path="subject/:subj/:code/" element={<BrowseDetails />} />
 					</Route>
 					<Route path="/user" element={<UserPage />}>
 						<Route path=":id/profile" element={<UserProfile />} />
@@ -36,6 +39,10 @@ createRoot(document.getElementById('root')).render(
 						<Route path=":id/comments" element={<UserComments />} />
 						<Route path=":id/coursemates" element={<UserCoursemates />} />
 						<Route path=":id/settings" element={<UserSettings />} />
+					</Route>
+					<Route path="/register" element={<RegisterPage />}>
+						<Route path="login" element={<RegisterLogin />} />
+						<Route path="signup" element={<RegisterSignup />} />
 					</Route>
 					{/* <Route path="*" element={<HomePage />} /> */}
 					{/* <Route path="dashboard" element={<Dashboard />}>

@@ -2,97 +2,97 @@
     {
         "college": "Carle Illinois College of Medicine",
         "abbr": "CIMED",
-        "color1": "#FFB528",
-        "color2": "#FFE84E"
+        "color1": "var(--details-color-dark-red)",
+        "color2": "var(--details-color-light-red)"
     },
     {
         "college": "College of Agricultural, Consumer & Environmental Sciences",
         "abbr": "ACES",
-        "color1": "#B251BD",
-        "color2": "#C8768C"
+        "color1": "var(--details-color-dark-red)",
+        "color2": "var(--details-color-light-red)"
     },
     {
         "college": "College of Applied Health Sciences",
         "abbr": "AHS",
-        "color1": "#F68080",
-        "color2": "#F9B16E"
+        "color1": "var(--details-color-dark-red)",
+        "color2": "var(--details-color-light-red)"
     },
     {
         "college": "College of Education",
         "abbr": "EDUC",
-        "color1": "#67B9A4",
-        "color2": "#95F9C3"
+        "color1": "var(--details-color-dark-red)",
+        "color2": "var(--details-color-light-red)"
     },
     {
         "college": "College of Fine & Applied Arts",
         "abbr": "FAA",
-        "color1": "#BD3658",
-        "color2": "#E3A69D"
+        "color1": "var(--details-color-dark-yellow)",
+        "color2": "var(--details-color-light-yellow)"
     },
     {
         "college": "College of Law",
         "abbr": "LAW",
-        "color1": "#78bdff",
-        "color2": "#46dde9"
+        "color1": "var(--details-color-dark-yellow)",
+        "color2": "var(--details-color-light-yellow)"
     },
     {
         "college": "College of Liberal Arts & Sciences",
         "abbr": "LAS",
-        "color1": "#78bdff",
-        "color2": "#46dde9"
+        "color1": "var(--details-color-dark-yellow)",
+        "color2": "var(--details-color-light-yellow)"
     },
     {
         "college": "College of Media",
         "abbr": null,
-        "color1": "#78bdff",
-        "color2": "#46dde9"
+        "color1": "var(--details-color-dark-yellow)",
+        "color2": "var(--details-color-light-yellow)"
     },
     {
         "college": "College of Veterinary Medicine",
         "abbr": "VetMed",
-        "color1": "#78bdff",
-        "color2": "#46dde9"
+        "color1": "var(--details-color-dark-blue)",
+        "color2": "var(--details-color-light-blue)"
     },
     {
         "college": "Division of General Studies",
         "abbr": null,
-        "color1": "#78bdff",
-        "color2": "#46dde9"
+        "color1": "var(--details-color-dark-blue)",
+        "color2": "var(--details-color-light-blue)"
     },
     {
         "college": "Gies College of Business",
         "abbr": "BUS",
-        "color1": "#78bdff",
-        "color2": "#46dde9"
+        "color1": "var(--details-color-dark-blue)",
+        "color2": "var(--details-color-light-blue)"
     },
     {
         "college": "Graduate College",
         "abbr": null,
-        "color1": "#78bdff",
-        "color2": "#46dde9"
+        "color1": "var(--details-color-dark-blue)",
+        "color2": "var(--details-color-light-blue)"
     },
     {
         "college": "Grainger College of Engineering",
         "abbr": "GCOE",
-        "color1": "#78bdff",
-        "color2": "#46dde9"
+        "color1": "var(--details-color-dark-green)",
+        "color2": "var(--details-color-light-green)"
     },
     {
         "college": "School of Social Work",
         "abbr": "SSW",
-        "color1": "#78bdff",
-        "color2": "#46dde9"
+        "color1": "var(--details-color-dark-green)",
+        "color2": "var(--details-color-light-green)"
     },
     {
         "college": "School of Information Sciences",
         "abbr": "iSchool",
-        "color1": "#78bdff",
-        "color2": "#46dde9"
+        "color1": "var(--details-color-dark-green)",
+        "color2": "var(--details-color-light-green)"
     },
     {
         "college": "School of Labor and Employment Relations",
         "abbr": "LER",
-        "color1": "#78bdff",
-        "color2": "#46dde9"
+        "color1": "var(--details-color-dark-green)",
+        "color2": "var(--details-color-light-green)"
     }
 ]

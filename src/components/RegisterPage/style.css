@@ -1,0 +1,38 @@
+.register-page {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-color);
+}
+
+.form-container {
+    width: 400px;
+    height: fit-content;
+    position: relative;
+}
+
+.register-circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.register-circle:nth-of-type(2) {
+    width: 100px;
+    height: 100px;
+    top: -40px;
+    left: -60px;
+    background: var(--details-color-1);
+    box-shadow: inset -8px -8px 12px rgba(0, 0, 0, 0.2), inset 4px 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.register-circle:nth-of-type(3) {
+    width: 150px;
+    height: 150px;
+    bottom: -70px;
+    right: -90px;
+    background: var(--details-color-2);
+    box-shadow: inset 4px -4px 12px rgba(0, 0, 0, 0.2), inset -8px 8px 12px rgba(255, 255, 255, 0.3);
+}

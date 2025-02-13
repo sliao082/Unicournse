@@ -4,30 +4,43 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    overflow-x: scroll;
     padding: 20px;
-}
-
-.user-course-list::-webkit-scrollbar {
-    display: none;
-}
-
-.user-course-list {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
 .user-course-item {
     width: 20%;
     height: 60px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     border-radius: 8px;
     background: var(--card-background-color);
     box-shadow: 6px 6px 10px var(--shadow-color), -6px -6px 10px #fff;
     margin-right: 30px;
-    flex-shrink: 0;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-family: 'Mona Sans', sans-serif;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.user-course-item-btn {
+    width: 10%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--button-color);
+    box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px #fff;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-family: 'Mona Sans', sans-serif;
+    color: #fff;
+    transition: 0.25s ease;
+}
+
+.user-course-item-btn:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 8px #fff, -4px -4px 8px var(--shadow-color);
 }
 
 .user-course-headings {
@@ -37,21 +50,27 @@
     margin: 2rem 0;
 }
 
-.user-coursemate-list {
+.user-coursmate-block {
     width: 76%;
+    height: calc(100% - 100px);
     display: flex;
-    overflow-x: scroll;
-    gap: 2rem;
-    padding: 20px;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -webkit-scrollbar-width: none;
 }
 
-.user-coursemate-list::-webkit-scrollbar {
+.user-coursmate-block::-webkit-scrollbar {
     display: none;
 }
 
 .user-coursemate-list {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+    overflow-x: scroll;
+    gap: 2rem;
+    padding: 20px;
 }
 
 .user-coursemate-card {
@@ -135,7 +154,7 @@
     padding: 12px;
     background: var(--card-background-color);
     border-radius: 10px;
-    box-shadow: inset 3px 3px 6px var(--shadow-color), inset -3px -3px 6px #fff;
+    box-shadow: 3px 3px 6px var(--shadow-color), -3px -3px 6px #fff;
 }
 
 .user-email-section svg {

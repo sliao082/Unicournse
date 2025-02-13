@@ -57,8 +57,11 @@
     transform: translateX(36%);
     backdrop-filter: blur(4px);
     text-decoration: none;
+    border: none;
+    outline: none;
     transition: .25s ease;
 }
+
 
 .side-bar-item.selected {
     background-color: #fd553a99;
@@ -81,6 +84,7 @@
 .side-bar-item.unselected:hover {
     cursor: pointer;
     background-color: #fd553a99;
+    color: #fff;
     box-shadow: inset 3px 3px 6px #a9311e66, inset -3px -3px 6px #ffcdc466;
 }
 

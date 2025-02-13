@@ -35,7 +35,26 @@ def save_data_to_json(subjects, filepath):
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(subjects, f, ensure_ascii=False, indent=4)
 
+def transform_courses_data(filepath):
+    with open(filepath, 'r', encoding='utf-8') as f:
+        courses = json.load(f)
+    
+    for course in courses:
+        for professor, prof_data in course['sections'].items():
+            prof_data['rmp'] = 0
+            
+            for section in prof_data['sectionList']:
+                section.pop('gpa', None)
+                section.pop('rmp', None)
+    
+    # Save the transformed data back to the file
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(courses, f, ensure_ascii=False, indent=2)
+
 if __name__ == "__main__":
-    url = "https://courses.illinois.edu/cisapp/explorer/schedule/2025/spring.xml"
-    subjects = scrape_subjects(url)
-    save_data_to_json(subjects, "./src/content/subject.json")
+    # url = "https://courses.illinois.edu/cisapp/explorer/schedule/2025/spring.xml"
+    # subjects = scrape_subjects(url)
+    # save_data_to_json(subjects, "./src/content/subject.json")
+    
+    transform_courses_data("./src/content/courses.json")
+    

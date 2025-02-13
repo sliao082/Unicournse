@@ -75,6 +75,48 @@
     margin-bottom: 25px;
 }
 
+.user-main-courses h2 span {
+    font-size: 1.2rem;
+    color: var(--details-color-2);
+    font-weight: 400;
+    margin-left: 10px;
+    transition: .25s ease;
+}
+
+.user-main-courses h2 span:hover {
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--details-color-4);
+}
+
+.user-browse-section-btn {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background: var(--card-background-color);
+    box-shadow: 3px 3px 6px var(--shadow-color), -3px -3px 6px #fff;
+    transition: .25s ease;
+    position: absolute;
+}
+
+.user-browse-section-btn:nth-of-type(1) {
+    left: -20px;
+}
+
+.user-browse-section-btn:nth-of-type(2) {
+    right: -20px;
+}
+
+.user-browse-section-btn:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 6px #fff, -3px -3px 6px var(--shadow-color);
+}
+
 .user-side-info-block {
     width: 24%;
     height: 100%;
@@ -221,3 +263,89 @@
     background: var(--button-color);
     color: #fff;
 }
+
+.user-profile-main-info {
+    width: 100%;
+    height: fit-content;
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px 8px;
+}
+
+.user-profile-info-item {
+    padding: 15px 20px 15px 35px;
+    border-radius: 12px;
+    background: var(--card-background-color);
+    box-shadow: 3px 3px 6px var(--shadow-color), -3px -3px 6px #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 15px 5% 15px 0;
+}
+
+.user-profile-info-icon {
+    position: absolute;
+    left: -10px;
+    top: -10%;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--card-background-color);
+    box-shadow: 3px 3px 6px var(--shadow-color), -3px -3px 6px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile-info-label {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    font-weight: 500;
+}
+
+.user-profile-info-value {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 300;
+    margin-left: 8px;
+}
+
+.user-profile-browse-subjects-section {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.user-profile-browse-subjects-section-title {
+    font-size: 1.1rem;
+    flex: 100%;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.user-profile-browse-subjects-section-label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 300;
+    margin-right: 10px;
+}
+
+.user-profile-browse-subjects-section-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.user-profile-browse-subjects-section-item p {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    font-weight: 300;
+}
+

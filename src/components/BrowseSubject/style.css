@@ -13,7 +13,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 40px 30px 40px;
+    padding: 0 40px 20px 40px;
 }
 
 .search-block input {
@@ -120,6 +120,8 @@
     color: var(--text-color);
     font-size: 1rem;
     margin-left: 8px;
+    display: inline-block;
+    width: calc(100% - 50px - 16px);
 }
 
 .browse-filter-container {
