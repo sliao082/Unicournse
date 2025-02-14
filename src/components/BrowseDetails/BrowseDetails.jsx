@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
+import { onAuthStateChanged } from 'firebase/auth';
 import db from '../../util/db';
+import auth from '../../util/auth';
 
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
@@ -11,6 +13,9 @@ import './style.css'
 const BrowseDetails = () => {
     const { subj, code } = useParams();
     const [courseData, setCourseData] = useState(null);
+    const [user, setUser] = useState(null);
+    const [userData, setUserData] = useState(null);
+    const [comment, setComment] = useState('');
 
     // Demo resources for the sidebar
     const resources = [
@@ -64,6 +69,36 @@ const BrowseDetails = () => {
         }
     }, [subj, code, db]);
 
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                setUser(user);
+                const docRef = doc(db, 'Users', user.uid);
+                const docSnap = await getDoc(docRef);
+
+                if (docSnap.exists()) {
+                    setUserData(docSnap.data());
+                } else {
+                    console.log('No such document!');
+                }
+            } else {
+                setUser(null);
+                setUserData(null);
+            }
+        });
+
+        return () => unsubscribe();
+    }, []);
+
+    const handleCommentSubmit = () => {
+        if (!user) {
+            alert('Please sign in to submit a comment.');
+            return;
+        }
+        // Handle comment submission logic here
+        console.log('Comment submitted:', comment);
+    };
+
     if (!courseData) {
         return <div>Loading course data...</div>;
     }
@@ -89,6 +124,15 @@ const BrowseDetails = () => {
                         </div> */}
                     </div>
                     <h2 className='browse-details-headings'>Comments</h2>
+                    <div className="browse-details-comment-input">
+                        <textarea 
+                            placeholder="Share your comment and thoughts here..." 
+                            rows="4" 
+                            value={comment} 
+                            onChange={(e) => setComment(e.target.value)}
+                        ></textarea>
+                        <button type="button" onClick={handleCommentSubmit}>Submit</button>
+                    </div>
                     <div className="browse-details-comments">
                         <div className="browse-details-comments-item">
                             <div className="browse-details-comments-item-profile">

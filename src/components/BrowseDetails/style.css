@@ -308,3 +308,11 @@
     margin-right: 6px;
     color: var(--text-color);
 }
+
+
+.browse-details-comment-input textarea {
+    width: 300%;
+    height: 50px;
+    margin-top: -20px;
+    border-radius: 5px;
+}
