@@ -1,0 +1,133 @@
+/* @media screen and (min-width: 1344px) and (max-width: 1536px) {
+    
+} */
+
+@media screen and (min-width: 1152px) and (max-width: 1344px) {
+    .side-bar {
+        width: 16%;
+    }
+
+    .main-body {
+        width: 64%;
+    }
+
+    .body-info-text {
+        width: 50%;
+        padding-left: 3dvw;
+    }
+
+    .body-info-img {
+        width: 50%;
+        padding: 0 3dvw;
+    }
+
+    .body-info-img::before {
+        margin-left: 3dvw;
+    }
+
+    .details-card {
+        width: 32%;
+        max-width: 280px;
+        height: 72%;
+        margin-right: 3dvw
+    }
+
+    .browse-subjects-card {
+        width: 29% !important;
+    }
+
+    .feature-text {
+        padding: 4dvh 20px;
+    }
+
+    .join-img {
+        width: 34%;
+    }
+
+    .join-title h1 {
+        width: 77%;
+        padding: 20px;
+        font-size: 1.4rem;
+    }
+
+    .course-bar {
+        width: 20%;
+    }
+
+    .browse-main-col-2 h3 {
+        font-size: 1rem;
+    }
+
+    .section-tag {
+        font-size: 0.8rem;
+    }
+
+    .browse-main-section-headings div p {
+        font-size: 0.9rem;
+    }
+
+    .resource-card {
+        width: 100%;
+    }
+
+    .modal-report-button {
+        width: 25%;
+    }
+
+    .side-bar-item {
+        width: 92%;
+        transform: translateX(26%);
+    }
+
+    .user-main-block {
+        padding: 5dvh 3dvw;
+    }
+
+    .user-main-header, .user-profile-main-info, .user-main-courses, .user-schedule-block {
+        width: 72%;
+    }
+
+    .user-side-info-block {
+        width: 28%;
+    }
+
+    .user-browse-section-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .days-header, .schedule-grid {
+        grid-template-columns: 0.6fr repeat(5, 0.96fr);
+    }
+
+    .user-coursemate-card {
+        min-width: 240px;
+    }
+
+    .profile-info {
+        .profile-user {
+            .profile-user-content {
+                p {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+
+    .settings-profile-section {
+        padding: 1.5rem 16px;
+    }
+
+    .home-notification-block {
+        width: 25dvw;
+    }
+
+    .small-nav-bar p {
+        font-size: 0.85rem;
+    }
+
+    .gened-comment-card {
+        padding: 24px;
+        width: calc(33.333% - 26.667px);
+    }
+}

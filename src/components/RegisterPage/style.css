@@ -7,6 +7,21 @@
     background: var(--background-color);
 }
 
+.register-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 70px;
+    height: 70px;
+    background-image: url('');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    background-color: gray;
+    z-index: 2;
+}
+
 .form-container {
     width: 400px;
     height: fit-content;

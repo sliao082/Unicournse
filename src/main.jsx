@@ -17,9 +17,11 @@ import UserSettings from './components/UserSettings/UserSettings';
 import RegisterPage from './components/RegisterPage/RegisterPage'
 import RegisterLogin from './components/RegisterLogin/RegisterLogin'
 import RegisterSignup from './components/RegisterSignup/RegisterSignup'
+import GenedPage from './components/GenedPage/GenedPage';
 import ErrorBoundary from './ErrorBoundary';
 
 import './index.css'
+import './App.css'
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
@@ -44,11 +46,8 @@ createRoot(document.getElementById('root')).render(
 						<Route path="login" element={<RegisterLogin />} />
 						<Route path="signup" element={<RegisterSignup />} />
 					</Route>
+					<Route path="/gened" element={<GenedPage />} />
 					{/* <Route path="*" element={<HomePage />} /> */}
-					{/* <Route path="dashboard" element={<Dashboard />}>
-						<Route index element={<RecentActivity />} />
-						<Route path="project/:id" element={<Project />} />
-					</Route> */}
 				</Routes>
 			</ErrorBoundary>
 		</BrowserRouter>

@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import auth from '../../util/auth';
 import db from '../../util/db';
 import { doc, getDoc } from 'firebase/firestore';
+import UserWarningBlock from '../UserWarningBlock/UserWarningBlock';
 
 import './style.css'
 
@@ -11,6 +12,8 @@ const UserSchedule = () => {
     const [user, setUser] = useState(null);
     const [profileData, setProfileData] = useState(null);
     const [scheduleBlocks, setScheduleBlocks] = useState([]);
+    const [warningText, setWarningText] = useState(null);
+    const [showWarning, setShowWarning] = useState(false);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -50,7 +53,7 @@ const UserSchedule = () => {
                 for (let courseIndex = 0; courseIndex < profileData.courses.length; courseIndex++) {
                     const course = profileData.courses[courseIndex];
                     const backgroundColor = colors[courseIndex % colors.length];
-                    
+
                     const [subject, courseNumStr] = course.course.split(' ');
                     const courseNum = Number(courseNumStr);
                     const courseDocRef = doc(db, 'Courses', subject);
@@ -59,7 +62,7 @@ const UserSchedule = () => {
                     const courseData = courseDocSnap.data();
                     const courseInfo = courseData.info.find(info => Number(info.code) === courseNum);
                     if (!courseInfo || !courseInfo.sections) continue;
-                    
+
                     if (course.sections && course.sections.length > 0) {
                         for (const userSection of course.sections) {
                             let matchingSection = null;
@@ -109,6 +112,68 @@ const UserSchedule = () => {
         if (period === 'AM' && hour === 12) hour = 0;
         return { hour, minute };
     };
+
+    useEffect(() => {
+        const checkOverlaps = () => {
+            const dayColumns = document.querySelectorAll('.day-column');
+
+            dayColumns.forEach((dayColumn) => {
+                const existingOverlays = dayColumn.querySelectorAll('.overlap-overlay');
+                existingOverlays.forEach((overlay) => overlay.remove());
+                const dayRect = dayColumn.getBoundingClientRect();
+                const slots = dayColumn.querySelectorAll('.time-slot');
+
+                for (let i = 0; i < slots.length; i++) {
+                    const rectA = slots[i].getBoundingClientRect();
+                    const relTopA = rectA.top - dayRect.top;
+                    for (let j = i + 1; j < slots.length; j++) {
+                        const rectB = slots[j].getBoundingClientRect();
+                        const relTopB = rectB.top - dayRect.top;
+
+                        if (
+                            rectA.left < rectB.right &&
+                            rectA.right > rectB.left &&
+                            rectA.top < rectB.bottom &&
+                            rectA.bottom > rectB.top
+                        ) {
+                            if (!showWarning) {
+                                setWarningText("Overlapping sections detected. Please adjust your schedule to avoid conflicts.");
+                                setShowWarning(true);
+                            }
+                            let higherRelTop, higherHeight, lowerRelTop;
+                            if (relTopA <= relTopB) {
+                                higherRelTop = relTopA;
+                                higherHeight = rectA.height;
+                                lowerRelTop = relTopB;
+                            } else {
+                                higherRelTop = relTopB;
+                                higherHeight = rectB.height;
+                                lowerRelTop = relTopA;
+                            }
+                            const overlayTop = lowerRelTop;
+                            const overlayHeight = (higherRelTop + higherHeight) - lowerRelTop;
+
+                            if (overlayHeight > 0) {
+                                const overlayDiv = document.createElement('div');
+                                overlayDiv.classList.add('overlap-overlay');
+                                overlayDiv.style.position = 'absolute';
+                                overlayDiv.style.left = '0';
+                                overlayDiv.style.top = `${overlayTop}px`;
+                                overlayDiv.style.width = '100%';
+                                overlayDiv.style.height = `${overlayHeight}px`;
+                                overlayDiv.style.background = 'repeating-linear-gradient(45deg, var(--button-color), var(--button-color) 10px, var(--selected-color) 10px, var(--selected-color) 13px)';
+                                overlayDiv.style.opacity = '0.7';
+                                overlayDiv.style.zIndex = '9';
+                                dayColumn.appendChild(overlayDiv);
+                            }
+                        }
+                    }
+                }
+            });
+        };
+
+        checkOverlaps();
+    }, [scheduleBlocks]);
 
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
     const times = [];
@@ -184,7 +249,9 @@ const UserSchedule = () => {
                 <div className="user-schedule-block">
                     <div className="schedule-container">
                         <div className="days-header">
-                            <div className="time-label-header"></div>
+                            <div className="time-label-header">
+                                
+                            </div>
                             {days.map(day => (
                                 <div key={day} className="day-header">{day}</div>
                             ))}
@@ -206,7 +273,9 @@ const UserSchedule = () => {
                                     {scheduleBlocks
                                         .filter(block => block.day === dayLetter)
                                         .map((block, i) => (
-                                            <div key={i} className="time-slot" style={{ height: block.height, top: block.top, backgroundColor: block.backgroundColor }} data-time={block.time} data-loc={block.loc} data-room={block.room} data-day={block.day} data-code={block.code}>
+                                            <div key={i} className="time-slot"
+                                                style={{ height: block.height, top: block.top, backgroundColor: block.backgroundColor }}
+                                                data-time={block.time} data-loc={block.loc} data-room={block.room} data-day={block.day} data-code={block.code}>
                                                 <div className="course-schedule-details">
                                                     <h3>{block.courseName}</h3>
                                                     <p>
@@ -220,6 +289,7 @@ const UserSchedule = () => {
                             ))}
                         </div>
                     </div>
+                    {showWarning && <UserWarningBlock text={warningText} showWarning={showWarning} setShowWarning={setShowWarning} width='48%' />}
                 </div>
                 <div className="user-side-info-block">
                     <h2>Your Sections</h2>
@@ -252,7 +322,7 @@ const UserSchedule = () => {
                             })
                         ) : (
                             <p className='no-info-text' style={{ textAlign: 'center', fontSize: '.9rem', marginTop: '2dvh' }}>
-                                You haven't added any courses yet.
+                                You haven't added any sections yet.
                             </p>
                         )}
                     </div>

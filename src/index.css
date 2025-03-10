@@ -1,6 +1,7 @@
 :root {
 	--background-color: linear-gradient(to bottom right, #e2ebfe, #edf5fd);
 	--card-background-color: linear-gradient(to bottom right, #f1f1fb, #ebebf9);
+	--theme-color: #C1BAF9;
 	--text-color: #2f2e3f;
 	--secondary-text-color: #9a98b5;
 	--selected-color: #fffefe;
@@ -12,6 +13,7 @@
 	--email-color: #f74737;
 	--rmp-color: #0021ff;
 	--gpa-color: #9f9eff;
+	--reddit-color: #f74300;
 	
 	--details-color-1: #ec7ada;
 	--details-color-2: #78bdff;
@@ -19,6 +21,8 @@
 	--details-color-4: #8787e1;
 	--details-color-5: #46dde9;
 	--details-color-6: #f9a826;
+	--details-color-7: #f66a6a;
+	--details-color-8: #87e89f;
 
 	--details-color-dark-red: #f66a6a;
 	--details-color-light-red: #f39d81;
@@ -30,7 +34,7 @@
 	--details-color-light-blue: #46dde9;
 
 	--details-color-dark-green: #66d5ae;
-	--details-color-light-green: #A8FFD8;
+	--details-color-light-green: #a6efcd;
 
 	--nav-bar-height: 15dvh;
 	--user-side-bar-width: 12%;

@@ -1,18 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, updateDoc, arrayUnion, Timestamp, collection, getDocs } from 'firebase/firestore';
+import { onAuthStateChanged } from 'firebase/auth';
 import db from '../../util/db';
+import auth from '../../util/auth'
 
-import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import UserWarningBlock from '../UserWarningBlock/UserWarningBlock';
 
 import './style.css'
 
 const BrowseDetails = () => {
     const { subj, code } = useParams();
     const [courseData, setCourseData] = useState(null);
+    const [user, setUser] = useState(null);
+    const [userData, setUserData] = useState(null);
+    const [comment, setComment] = useState('');
+    const [allComments, setAllComments] = useState([]);
+    const [warningText, setWarningText] = useState(null);
+    const [showWarning, setShowWarning] = useState(false);
 
-    // Demo resources for the sidebar
     const resources = [
         {
             title: "Lecture Slides",
@@ -23,7 +29,6 @@ const BrowseDetails = () => {
             title: "Practice Problems",
             description: "Extra problems for hands-on practice.",
             link: "/resources/practice-problems"
-
         },
         {
             title: "Video Tutorials",
@@ -49,20 +54,110 @@ const BrowseDetails = () => {
                     if (foundCourse) {
                         setCourseData(foundCourse);
                     } else {
-                        console.error("Course not found");
+                        setWarningText('Course not found. Please try again later.');
+                        setShowWarning(true);
                     }
-                } else {
-                    console.error("No such subject found in Firestore!");
                 }
             } catch (err) {
-                console.error("Error fetching course:", err);
+                setWarningText('Error fetching course data. Please try again later.');
+                setShowWarning(true)
             }
         };
 
         if (subj && code) {
             fetchCourse();
         }
-    }, [subj, code, db]);
+    }, [subj, code]);
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                setUser(user);
+                const docRef = doc(db, 'Users', user.uid);
+                const docSnap = await getDoc(docRef);
+
+                if (docSnap.exists()) {
+                    setUserData(docSnap.data());
+                }
+            } else {
+                setUser(null);
+                setUserData(null);
+            }
+        });
+
+        return () => unsubscribe();
+    }, []);
+
+    const formatTimestamp = (timestamp) => {
+        const date = timestamp.toDate();
+        const year = date.getFullYear();
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        const day = date.getDate().toString().padStart(2, '0');
+        return `${year} - ${month} - ${day}`;
+    };
+
+    useEffect(() => {
+        const fetchComments = async () => {
+            try {
+                const usersCol = collection(db, "Users");
+                const querySnapshot = await getDocs(usersCol);
+                const commentsArr = [];
+                querySnapshot.forEach((userDoc) => {
+                    const data = userDoc.data();
+                    const username = data.info?.username || "Anonymous";
+                    if (data.comments && Array.isArray(data.comments)) {
+                        data.comments.forEach(comm => {
+                            if (comm.course === `${subj} ${courseData.code}`) {
+                                commentsArr.push({
+                                    username,
+                                    date: comm.date,
+                                    content: comm.content
+                                });
+                            }
+                        });
+                    }
+                });
+                setAllComments(commentsArr);
+            } catch (err) {
+                setWarningText('Error fetching comments. Please try again later.');
+                setShowWarning(true);
+            }
+        };
+
+        if (courseData) {
+            fetchComments();
+        }
+    }, [courseData, subj]);
+
+    const handleCommentSubmit = async () => {
+        if (!user) {
+            setWarningText('Please sign in to submit a comment.');
+            setShowWarning(true);
+            return;
+        }
+        if (!comment.trim()) {
+            setWarningText('Please enter a comment before submitting.');
+            setShowWarning(true);
+            return;
+        }
+
+        try {
+            const userDocRef = doc(db, 'Users', user.uid);
+            await updateDoc(userDocRef, {
+                comments: arrayUnion({
+                    id: (userData?.comments?.length || 0),
+                    course: `${subj} ${courseData.code}`,
+                    content: comment,
+                    date: Timestamp.now()
+                })
+            });
+            setComment('');
+            alert('Comment submitted successfully.');
+        } catch (error) {
+            console.error('Error submitting comment:', error);
+            alert('Failed to submit comment.');
+        }
+    };
 
     if (!courseData) {
         return <div>Loading course data...</div>;
@@ -75,61 +170,29 @@ const BrowseDetails = () => {
                     <div className="browse-details-info">
                         <div className="browse-details-info-content">
                             <h3>{subj} {courseData.code}: {courseData.name}</h3>
-                            <Link to={`/browse/subject/${subj}`} className='browse-details-info-link'>Back to Subject</Link>
+                            <Link to={`/browse/subject/${subj}`} className='browse-details-info-link'>Back to Browse Courses</Link>
                         </div>
-                        {/* <div className="browse-details-info-gpa">
-                            <CircularProgressbarWithChildren  value={courseData.gpa} maxValue={4} styles={buildStyles({
-                                textSize: '1rem',
-                                pathColor: '#78bdff',
-                                textColor: '#78bdff',
-                                trailColor: 'none'
-                            })}>
-                                <h3>GPA: {courseData.gpa}</h3>
-                            </CircularProgressbarWithChildren >
-                        </div> */}
                     </div>
                     <h2 className='browse-details-headings'>Comments</h2>
+                    <div className="browse-details-comment-input">
+                        <input type="text" placeholder="Share your comment and thoughts here..." onChange={(e) => setComment(e.target.value)} value={comment}></input>
+                        <button type="button" onClick={handleCommentSubmit}>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="var(--button-color)">
+                                <path d="M1.94607 9.31543C1.42353 9.14125 1.4194 8.86022 1.95682 8.68108L21.043 2.31901C21.5715 2.14285 21.8746 2.43866 21.7265 2.95694L16.2733 22.0432C16.1223 22.5716 15.8177 22.59 15.5944 22.0876L11.9999 14L17.9999 6.00005L9.99992 12L1.94607 9.31543Z"></path>
+                            </svg>
+                        </button>
+                    </div>
                     <div className="browse-details-comments">
-                        <div className="browse-details-comments-item">
-                            <div className="browse-details-comments-item-profile">
-                                <div className="browse-details-comments-item-profile-img"></div>
-                                <h3>Anonymous</h3>
-                                <span>2024 - 01 - 12</span>
+                        {allComments.length > 0 ? allComments.map((comm, idx) => (
+                            <div className="browse-details-comments-item" key={idx}>
+                                <div className="browse-details-comments-item-profile">
+                                    <div className="browse-details-comments-item-profile-img"></div>
+                                    <h3>{comm.username}</h3>
+                                    <span>{formatTimestamp(comm.date)}</span>
+                                </div>
+                                <p>{comm.content}</p>
                             </div>
-                            <p>This course is very informative and engaging.</p>
-                        </div>
-                        <div className="browse-details-comments-item">
-                            <div className="browse-details-comments-item-profile">
-                                <div className="browse-details-comments-item-profile-img"></div>
-                                <h3>Anonymous</h3>
-                                <span>2024 - 01 - 12</span>
-                            </div>
-                            <p>I found the lectures to be quite insightful.</p>
-                        </div>
-                        <div className="browse-details-comments-item">
-                            <div className="browse-details-comments-item-profile">
-                                <div className="browse-details-comments-item-profile-img"></div>
-                                <h3>Anonymous</h3>
-                                <span>2024 - 01 - 12</span>
-                            </div>
-                            <p>The professor explains concepts very clearly.</p>
-                        </div>
-                        <div className="browse-details-comments-item">
-                            <div className="browse-details-comments-item-profile">
-                                <div className="browse-details-comments-item-profile-img"></div>
-                                <h3>Anonymous</h3>
-                                <span>2024 - 01 - 12</span>
-                            </div>
-                            <p>I enjoyed the class discussions and activities.</p>
-                        </div>
-                        <div className="browse-details-comments-item">
-                            <div className="browse-details-comments-item-profile">
-                                <div className="browse-details-comments-item-profile-img"></div>
-                                <h3>Anonymous</h3>
-                                <span>2024 - 01 - 12</span>
-                            </div>
-                            <p>The course material is well-organized and easy to follow.</p>
-                        </div>
+                        )) : <p className='no-info-text'>No comments yet. Why not share one by typing your thoughts above 👆?</p>}
                     </div>
                 </div>
             </div>
@@ -149,8 +212,9 @@ const BrowseDetails = () => {
                     ))}
                 </div>
             </div>
+            {showWarning && <UserWarningBlock text={warningText} showWarning={showWarning} setShowWarning={setShowWarning} width='40%' />}
         </>
-    )
-}
+    );
+};
 
-export default BrowseDetails
+export default BrowseDetails;

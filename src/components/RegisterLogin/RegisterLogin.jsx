@@ -1,13 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../util/auth';
 import db from '../../util/db';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { doc, setDoc, getDoc } from 'firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
+
+import UserWarningBlock from '../UserWarningBlock/UserWarningBlock';
+
 import './style.css';
 
 function RegisterLogin() {
     const navigate = useNavigate();
+    const [emailOrUserId, setEmailOrUserId] = useState('');
+    const [password, setPassword] = useState('');
+    const [warningText, setWarningText] = useState(null);
+    const [showWarning, setShowWarning] = useState(false);
 
     const generateRandomId = (length = 8) => {
         const characters = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -46,38 +53,105 @@ function RegisterLogin() {
                 const data = docSnap.data();
                 navigate(`/user/${data.info.userid[0]}/profile`);
             } else {
-                randomUserId = generateRandomId();
-                await setDoc(userDocRef, {
-                    comments: [],
-                    sections: [],
-                    info: {
-                        email: result.user.email,
-                        gender: "N/A",
-                        major: "N/A",
-                        userid: [randomUserId, new Date('2000-01-01T00:00:00Z')],
-                        username: result.user.displayName,
-                        year: "N/A",
-                        deactivate: false,
-                        visible: false
-                    },
-                    watchlist: [],
-                    notifications: [],
-                    invites: []
-                }, { merge: true });
-                navigate(`/user/${randomUserId}/settings`);
+                // randomUserId = generateRandomId();
+                // await setDoc(userDocRef, {
+                //     comments: [],
+                //     info: {
+                //         email: result.user.email,
+                //         gender: "N/A",
+                //         major: "N/A",
+                //         userid: [randomUserId, new Date('2000-01-01T00:00:00Z')],
+                //         username: result.user.displayName,
+                //         year: "N/A",
+                //         method: 'google',
+                //         deactivate: false,
+                //         visible: false,
+                //         notification: false,
+                //         pfp: '1'
+                //     },
+                //     courses: [],
+                //     watchlist: [],
+                //     notifications: [],
+                //     invites: []
+                // }, { merge: true });
+                // navigate(`/user/${randomUserId}/settings`);
+                setWarningText('This account is not registered. Please sign up first.');
+                setShowWarning(true);
             }
         } catch (error) {
-            console.error('Error signing in with Google:', error);
+            setWarningText(error.message);
+            setShowWarning(true);
         }
     };
+
+    // const handleEmailLogin = async (e) => {
+    //     e.preventDefault();
+
+    //     if (!emailOrUserId || !password) {
+    //         setError('Please fill out all fields');
+    //         return;
+    //     }
+
+    //     try {
+    //         const isEmail = emailOrUserId.includes('@');
+    //         if (isEmail) {
+
+    //             const userCredential = await signInWithEmailAndPassword(auth, emailOrUserId, password);
+    //             const user = userCredential.user;
+
+    //             const userDocRef = doc(db, "Users", user.uid);
+    //             const docSnap = await getDoc(userDocRef);
+
+    //             if (docSnap.exists()) {
+    //                 const data = docSnap.data();
+    //                 if (data && data.info && data.info.userid && Array.isArray(data.info.userid)) {
+    //                     navigate(`/user/${data.info.userid[0]}/profile`);
+    //                 }
+    //             } else {
+    //                 setWarningText('No user found with this email/password combination');
+    //                 setShowWarning(true);
+    //             }
+    //             console.log('Email login');
+    //             return
+    //         } else {
+    //             const usersRef = collection(db, "Users");
+    //             const q = query(usersRef, where("info.userid", "array-contains", emailOrUserId));
+    //             const querySnapshot = await getDocs(q);
+
+    //             if (querySnapshot.empty) {
+    //                 setWarningText('No user found with this ID/password combination');
+    //                 setShowWarning(true);
+    //                 return;
+    //             }
+
+    //             const userDoc = querySnapshot.docs[0].data();
+    //             const email = userDoc.info.email;
+
+    //             if (!email) {
+    //                 setWarningText('Email not found for this user ID');
+    //                 setShowWarning(true);
+    //                 return;
+    //             }
+
+    //             const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    //             const user = userCredential.user;
+
+    //             navigate(`/user/${emailOrUserId}/profile`);
+    //         }
+    //     } catch (error) {
+    //         setWarningText(error.code === 'auth/invalid-credential' ? 
+    //             'Invalid email/user ID or password' : 'An error occurred. Please try again later.');
+    //         setShowWarning(true);
+    //     }
+    // };
 
     return (
         <div className="register-block">
             <h2>Login</h2>
             <form>
-                <input type="text" placeholder="Email or User ID" className="input-group" required />
-                <input type="password" placeholder="Password" className="input-group" required />
-                <button type="submit" className="register-btn">Login</button>
+                <input type="text" placeholder="Email or User ID" className="input-group" value={emailOrUserId} onChange={(e) => setEmailOrUserId(e.target.value)} required />
+                <input type="password" placeholder="Password" className="input-group" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                <button type="button" className="register-btn">Login</button>
             </form>
             <div className="divider">
                 <span>or</span>
@@ -90,6 +164,7 @@ function RegisterLogin() {
                 <span>Don't have an account? </span>
                 <Link to="/register/signup">Create one</Link>
             </div>
+            {showWarning && <UserWarningBlock text={warningText} showWarning={showWarning} setShowWarning={setShowWarning} width='100%' />}
         </div>
     );
 }

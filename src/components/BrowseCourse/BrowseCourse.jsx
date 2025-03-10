@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-
 import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { onAuthStateChanged } from "firebase/auth";
 import db from '../../util/db';
 import auth from '../../util/auth';
+
+import UserWarningBlock from '../UserWarningBlock/UserWarningBlock';
 
 import './style.css';
 
@@ -17,13 +19,46 @@ const BrowseCourse = () => {
     const [selectedCourse, setSelectedCourse] = useState(null);
     const [sectionFilter, setSectionFilter] = useState(null);
     const [availableSectionTypes, setAvailableSectionTypes] = useState([]);
+    const [user, setUser] = useState(null);
+    const [profileData, setProfileData] = useState(null);
+    const [isInWatchlist, setIsInWatchlist] = useState(false);
+    const [warningText, setWarningText] = useState(null);
+    const [showWarning, setShowWarning] = useState(false);
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+        });
+        return () => unsubscribe();
+    }, []);
+
+    useEffect(() => {
+        const fetchProfileData = async () => {
+            if (user) {
+                const userDocRef = doc(db, 'Users', user.uid);
+                const docSnap = await getDoc(userDocRef);
+                if (docSnap.exists()) {
+                    setProfileData(docSnap.data());
+                } else {
+                    console.error('No such document!');
+                }
+            }
+        };
+        fetchProfileData();
+    }, [user]);
+
+    useEffect(() => {
+        if (profileData && selectedCourseCode) {
+            const courseIdentifier = `${subj} ${selectedCourseCode}`;
+            setIsInWatchlist(profileData.watchlist && profileData.watchlist.includes(courseIdentifier));
+        }
+    }, [profileData, selectedCourseCode, subj]);
 
     useEffect(() => {
         const fetchCourses = async () => {
             try {
                 const docRef = doc(db, "Courses", subj);
                 const docSnap = await getDoc(docRef);
-
                 if (docSnap.exists()) {
                     const courseList = docSnap.data().info.map(course => ({
                         id: course.code,
@@ -33,7 +68,6 @@ const BrowseCourse = () => {
                         credits: course.credits,
                         sections: course.sections
                     }));
-
                     setCourses(courseList);
                     setFilteredCourses(courseList);
                 } else {
@@ -43,9 +77,38 @@ const BrowseCourse = () => {
                 console.error("Error fetching courses:", error);
             }
         };
-
         if (subj) fetchCourses();
     }, [subj]);
+
+    const handleWatchlistClick = async () => {
+        if (!user) {
+            setWarningText("You must be logged in to add course to watchlist");
+            setShowWarning(true);
+            return;
+        }
+        if (!selectedCourseCode) {
+            setWarningText("Please select a course first");
+            setShowWarning(true);
+            return;
+        }
+        const courseToModify = `${subj} ${selectedCourseCode}`;
+        const userDocRef = doc(db, 'Users', user.uid);
+        let newWatchlist = profileData?.watchlist ? [...profileData.watchlist] : [];
+      
+        if (isInWatchlist) {
+            newWatchlist = newWatchlist.filter(course => course !== courseToModify);
+            await updateDoc(userDocRef, { watchlist: newWatchlist });
+            setProfileData({ ...profileData, watchlist: newWatchlist });
+            setIsInWatchlist(false);
+        } else {
+            if (!newWatchlist.includes(courseToModify)) {
+                newWatchlist.push(courseToModify);
+            }
+            await updateDoc(userDocRef, { watchlist: newWatchlist });
+            setProfileData({ ...profileData, watchlist: newWatchlist });
+            setIsInWatchlist(true);
+        }
+    };
 
     const handleSearchChange = (e) => {
         const term = e.target.value.toLowerCase();
@@ -275,7 +338,16 @@ const BrowseCourse = () => {
         }
 
         browseMainCol2.querySelector('h2').textContent = `${subj} ${code}: ${name}`;
-        browseMainCol2.querySelector('.browse-info-attr').textContent = `Credits: ${credits} | Avg. GPA: ${gpa}`;
+        const infoAttr = browseMainCol2.querySelector('.browse-info-attr');
+        let courseInfoElem = infoAttr.querySelector('.course-info');
+        if (courseInfoElem) {
+            courseInfoElem.textContent = `Credits: ${credits} | Avg. GPA: ${gpa} | `;
+        } else {
+            courseInfoElem = document.createElement('span');
+            courseInfoElem.className = 'course-info';
+            courseInfoElem.textContent = `Credits: ${credits} | Avg. GPA: ${gpa} | `;
+            infoAttr.insertBefore(courseInfoElem, infoAttr.firstChild);
+        }
         browseMainCol2.querySelector('.browse-info-desc').textContent = desc;
         browseMainCol2.style.opacity = 1;
         browseMainCol2.style.transform = 'translateY(0)';
@@ -324,6 +396,7 @@ const BrowseCourse = () => {
                 <div className="browse-main-subject-block">
                     <div className="browse-main-col-1">
                         <h1 className='browse-main-letter'>{subj}</h1>
+                        <Link to={`/browse`} className='browse-details-info-link'>Back to Browse Subjects</Link>
                         {filteredCourses.map(course => (
                             <div key={course.id} className="browse-main-item" onClick={handleCourseItemClick} data-code={course.id} data-gpa={course.gpa} data-credits={course.credits} data-desc={course.desc}>
                                 <h3 className="browse-main-code">{course.id}</h3>
@@ -333,7 +406,14 @@ const BrowseCourse = () => {
                     </div>
                     <div className="browse-main-col-2">
                         <h2></h2>
-                        <span className='browse-info-attr'></span>
+                        <span className='browse-info-attr'>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill={isInWatchlist ? 'var(--button-color)' : 'var(--text-color)'} onClick={handleWatchlistClick}>
+                                <path d="M5 2H19C19.5523 2 20 2.44772 20 3V22.1433C20 22.4194 19.7761 22.6434 19.5 22.6434C19.4061 22.6434 19.314 22.6168 19.2344 22.5669L12 18.0313L4.76559 22.5669C4.53163 22.7136 4.22306 22.6429 4.07637 22.4089C4.02647 22.3293 4 22.2373 4 22.1433V3C4 2.44772 4.44772 2 5 2ZM18 4H6V19.4324L12 15.6707L18 19.4324V4Z"></path>    
+                            </svg>
+                            <h4 style={{ color: isInWatchlist ? 'var(--button-color)' : 'var(--text-color)' }}>
+                                {isInWatchlist ? 'Added to watchlist' : 'Add to watchlist'}
+                            </h4>
+                        </span>
                         <p className='browse-info-desc'></p>
                         <h3>
                             Sections
@@ -375,6 +455,7 @@ const BrowseCourse = () => {
                     ))}
                 </div>
             </div>
+            {showWarning && <UserWarningBlock text={warningText} showWarning={showWarning} setShowWarning={setShowWarning} width='30%' />}
         </>
     )
 }

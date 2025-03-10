@@ -12,6 +12,7 @@ const UserSettings = () => {
     const [userData, setUserData] = useState(null);
     const [warningText, setWarningText] = useState(null);
     const [showWarning, setShowWarning] = useState(false);
+    const [notificationEnabled, setNotificationEnabled] = useState(false);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (user) => {
@@ -30,7 +31,7 @@ const UserSettings = () => {
                 setUserData(null);
             }
         });
-        
+
         return () => unsubscribe();
     }, []);
 
@@ -134,6 +135,29 @@ const UserSettings = () => {
         }
     };
 
+    const handleNotificationToggle = async () => {
+        if (!user) {
+            return;
+        }
+        const docRef = doc(db, "Users", user.uid);
+        const newNotificationStatus = !userData.info.notification;
+
+        try {
+            await updateDoc(docRef, {
+                "info.notification": newNotificationStatus
+            });
+            setUserData(prevState => ({
+                ...prevState,
+                info: {
+                    ...prevState.info,
+                    notification: newNotificationStatus
+                }
+            }));
+        } catch (error) {
+            console.error("Error updating notification status: ", error);
+        }
+    };
+
     return (
         <div className="user-main-block">
             <div className="settings-container">
@@ -161,14 +185,7 @@ const UserSettings = () => {
                                     <input className="user-input-text" type="text" placeholder={userData?.info?.userid ? userData.info.userid[0] : ""} style={{ width: '60%' }} id='userid-input' />
                                     <small>You may only change User ID every 7 days</small>
                                 </div>
-                                <button 
-                                  type="button" 
-                                  className="user-btn" 
-                                  style={{ marginLeft: '0', position: 'absolute', bottom: '15px', right: '15px' }} 
-                                  onClick={handleProfileSave}
-                                >
-                                  Save
-                                </button>
+                                <button type="button" className="user-btn" style={{ marginLeft: '0', position: 'absolute', bottom: '15px', right: '15px' }} onClick={handleProfileSave}>Save</button>
                             </div>
                         </div>
                     </div>
@@ -177,7 +194,7 @@ const UserSettings = () => {
                         <div className="user-main-info">
                             <div className="user-info-item" style={{ width: '35%' }}>
                                 <p>Gender:</p>
-                                <select className="user-input-text" id="gender-select" defaultValue={userData?.info?.gender}>
+                                <select className="user-input-text" id="gender-select" value={userData?.info?.gender}>
                                     <option value="" disabled>Select gender</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
@@ -190,7 +207,7 @@ const UserSettings = () => {
                             </div>
                             <div className="user-info-item" style={{ width: '35%' }}>
                                 <p>Year:</p>
-                                <select className="user-input-text" id="year-select" defaultValue={userData?.info?.year}>
+                                <select className="user-input-text" id="year-select" value={userData?.info?.year}>
                                     <option value="" disabled>Select year</option>
                                     <option value="Freshman">Freshman</option>
                                     <option value="Sophomore">Sophomore</option>
@@ -240,8 +257,8 @@ const UserSettings = () => {
                                 <p>Manage notification preferences</p>
                             </div>
                             <label className="user-switch">
-                                <input type="checkbox" id='notif-switch' />
-                                <span className="user-slider round"></span>
+                                <input type="checkbox" id='notif-switch' defaultChecked={userData?.info?.notification}/>
+                                <span className="user-slider round" onClick={handleNotificationToggle}></span>
                             </label>
                         </div>
                         <div className="setting-item danger-item">
@@ -261,7 +278,7 @@ const UserSettings = () => {
                     </div>
                 </div>
             </div>
-            {showWarning && <UserWarningBlock text={warningText} showWarning={showWarning} setShowWarning={setShowWarning} />}
+            {showWarning && <UserWarningBlock text={warningText} showWarning={showWarning} setShowWarning={setShowWarning} width='30%' />}
         </div>
     )
 }

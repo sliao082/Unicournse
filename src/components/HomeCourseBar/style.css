@@ -5,6 +5,18 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    padding-inline: 10px;
+    padding-bottom: 50px;
+    overflow-y: scroll;
+}
+
+.course-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.course-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .course-bar h2 {
@@ -15,7 +27,8 @@
 
 .course-bar .course-list {
     width: 100%;
-    height: 100%;
+    height: fit-content;
+    min-height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -35,6 +48,7 @@
     border-radius: 18px;
     background: var(--card-background-color);
     flex-shrink: 0;
+    text-decoration: none;
     transition: 0.2s ease;
 }
 
@@ -73,11 +87,22 @@
     color: var(--text-color);
     font-size: 0.9rem;
     font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
 }
 
 .course-details p {
     color: var(--secondary-text-color);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 400;
     margin: 5px 0;
+    line-break: anywhere;
+}
+
+.course-details span {
+    color: var(--text-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 5px;
 }

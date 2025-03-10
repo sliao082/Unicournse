@@ -4,13 +4,15 @@
 }
 
 .settings-header {
+    width: 100%;
+    height: calc(15% - 2rem);
     margin-bottom: 2rem;
     border-bottom: 2px solid var(--shadow-color);
 
     h2 {
         font-size: 1.8rem;
         color: var(--text-color);
-        margin: 20px 0;
+        transform: translateY(40%);
     }
 }
 
@@ -26,8 +28,7 @@
 
 .settings-profile-section {
     width: 56%;
-    height: fit-content;
-    max-height: calc(48% - 1.5rem);
+    height: calc(50% - 1.5rem);
     border-radius: 15px;
     box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px #fff;
     padding: 2rem 20px;
@@ -60,7 +61,11 @@
         width: 120px;
         height: 120px;
         border-radius: 50%;
-        background-color: #c5c5c5;
+        background-color: #ededfa;
+        background-image: url('../../assets/user_none.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 84%;
         box-shadow: 6px 6px 12px var(--shadow-color), -6px -6px 12px #fff;
         transition: .25s ease;
         cursor: pointer;
@@ -105,8 +110,10 @@
             margin: 10px 0;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
 
             p {
+                width: calc(40% - 10px);
                 font-size: 1rem;
                 color: var(--secondary-text-color);
                 margin: 0.5rem 0;
@@ -121,8 +128,7 @@
         position: relative;
 
         small {
-            position: absolute;
-            bottom: -20px;
+            margin-top: 4px;
             left: 0;
             color: var(--button-color);
             font-size: 0.8rem;
@@ -191,7 +197,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content;
+    min-width: fit-content;
     height: 34px;
 }
 
@@ -229,7 +235,7 @@
     width: 25px;
     top: -2.5px;
     left: 0;
-    background-color: white;
+    background-color: #fff;
     -webkit-transition: .4s;
     transition: .4s;
     box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px #fff;
@@ -255,7 +261,7 @@ input:checked + .user-slider:before {
 }
 
 .user-btn {
-    padding: 0.7rem 1.4rem;
+    padding: 10px 15px;
     background: var(--card-background-color);
     color: var(--text-color);
     font-size: 1rem;

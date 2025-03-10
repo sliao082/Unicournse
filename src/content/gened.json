@@ -1,36 +1,1272 @@
 {
     "Humanities and the Arts": [
         {
-            "subject": "AAS",
-            "code": "101",
-            "name": "Asian American Studies",
-            "comments": {
-                "content": "Some comment on the course",
-                "url": "https://www.google.com"
-            }
+            "subject": "CLCV",
+            "code": "224",
+            "name": "Greco-Roman Antiquity and US Minority Cultures",
+            "comments": [
+                {
+                    "content": "previously there was no homework aside from assigned readings (probably about 10-15 pages per class twice a week, no extra assigned readings for discussion section) and most of your points came from exams and attendance.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1i0edit/comment/m7100ge/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2025-01-14 01:55:12 UTC"
+                },
+                {
+                    "content": "Its easy average grade fall 2024 was 90.5% and they removed the Final Project this sem, basically just read a bit",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1i9an0y/comment/m90fypp/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2025-01-25 00:39:41 UTC"
+                },
+                {
+                    "content": "Im in it rn all u basically gotta do is read or understanding the readings theres no projects / assignments basically just discussion attendence/quizzes then exams Average grade fall 2024 was 90.5%",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1icbz17/comment/m9pdx3h/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2025-01-28 21:02:42 UTC"
+                },
+                {
+                    "content": "This class is extremely easy don't be intimidated. I probably did 45 minutes of work a week and got an A. You don't really need to watch the lectures completely or do the resdingd",
+                    "url": "https://www.reddit.com/r/UIUC/comments/s7tyn1/comment/htc3efq/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-01-19 16:36:06 UTC"
+                },
+                {
+                    "content": "It seems really easy so far to be honest. Technically it's a lot of readings but in reality, you just need to skim Schmoop so you aren't lost in discussion (basically everyone does this), show up to lectures for pop quizzes which Soloman literally gives the answers to, occasionally do some short assignments that take at most 30 minutes to an hour, and have exams here and there that are either term memorization or essay style where they give the prompt beforehand. On top of this, there's EC and the cutoffs for an A are lowered. ",
+                    "url": "https://www.reddit.com/r/UIUC/comments/fmtjch/comment/fl8df48/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-03-22 23:52:35 UTC"
+                }
+            ]
         },
         {
-            "subject": "PSYC",
-            "code": "101",
-            "name": "Intro to Psychology",
-            "comments": {
-                "content": "Some comment on the course",
-                "url": "https://www.google.com"
-            }
+            "subject": "MACS",
+            "code": "100",
+            "name": "Intro to Popular TV & Movies",
+            "comments": [
+                {
+                    "content": "i took macs 100 it was super easy",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1481akv/comment/jnyjl8t/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-06-13 03:26:51 UTC"
+                },
+                {
+                    "content": "I had professor Jonathan Knipp. Asynchronous lecture with in person discussion. 3 papers (less than 2 pages each), 2 midterms (second one is your final and only includes content after midterm 1), group media project, discussion grade. HW is to read/watch lecture vids and an assigned movie/TV screening. Exams have study guides which contain most of everything you'll need on the exam (exams are open book, open note and you can search e text as needed). Should be an easy A if you put in effort.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/zr4ii4/comment/j12p4k9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-12-21 05:48:48 UTC"
+                },
+                {
+                    "content": "I just finished it this semester and it's free. Not sure if it's the same way this spring semester but mine was completely async.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/zr4ii4/comment/j11n7f1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-12-21 00:31:44 UTC"
+                },
+                {
+                    "content": "took it last spring semester, so the second half was online. Easy A , i recommend (3 writing assignments, and 1 was in place of the usual movie project) I am assuming they still aren't doing the group movie project since everything is online so you should be good",
+                    "url": "https://www.reddit.com/r/UIUC/comments/k5ldtd/comment/gegk8tm/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-12-03 05:32:36 UTC"
+                },
+                {
+                    "content": "Really easy A class! Loved the professor. Knipp was very understanding and we only had about 2 exams. Discussion meetings were mandatory. Instead of the project, we took two mini quizzes. Very doable & easy class.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/k5ldtd/comment/giyvv1b/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-01-12 04:42:57 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "DANC",
+            "code": "100",
+            "name": "Intro to Contemporary Dance",
+            "comments": [
+                {
+                    "content": "This was one of the easiest classes ever. We all took it just for a gpa bump",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1cyh1he/comment/l5agrx5/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-05-23 07:05:33 UTC"
+                },
+                {
+                    "content": "Beware danc 100 requires actual dancing but it's pretty simple",
+                    "url": "https://www.reddit.com/r/UIUC/comments/v0rn5b/comment/iaiduo8/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-05-30 04:40:41 UTC"
+                },
+                {
+                    "content": "lolol this class is a joke. I remember doing the final dance 5th floor eceb because I was stuck in lab and forgot to do it. Maximum 2 hrs/week",
+                    "url": "https://www.reddit.com/r/UIUC/comments/fn3m5s/comment/fl82lrc/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-03-22 22:03:02 UTC"
+                },
+                {
+                    "content": "Easy af. Only 3 online submissions throughout the course related to dancing. Does not need to be professional. Most of the classwork/homework is reviewing other dances and commenting on them.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/fn3m5s/comment/fl7z7jo/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-03-22 21:28:45 UTC"
+                },
+                {
+                    "content": "Super easy. If you. Complete everything you'll get an A.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/fn3m5s/comment/fl8qk30/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-03-23 02:17:38 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "CLCV",
+            "code": "115",
+            "name": "Mythology of Greece and Rome",
+            "comments": [
+                {
+                    "content": "Not very difficult at all. Especially if you find mythology fun. He has a book that has all the assignments, they usually either have you look something up or write something short. You do have to do some reading but I didn't find it to be hard. Lectures are really fun. Overall a nice and fun A if you put some effort in.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/98j6u1/comment/e4gf2m9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2018-08-19 10:07:19 UTC"
+                },
+                {
+                    "content": "It will be about 3-6 hours of work every week (depending on how fast you can read), with two midterms, a final, and three 1250-1500 word essays.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1gvcisx/comment/ly106h5/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-11-20 01:23:34 UTC"
+                },
+                {
+                    "content": "The course is a bit time consuming but it's not too hard to get an A.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1gvcisx/comment/ly3p8sr/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-11-20 14:24:41 UTC"
+                },
+                {
+                    "content": "Take the summer section, easiest course I've ever taken. If you had watched OSP's mythology videos growing up or had read Rick riordan novels you could get like an 80%. The exams were long but if you just went through the learn@Illinois modules and paid attention it was all from there.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1gvcisx/comment/ly4grk9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-11-20 16:52:19 UTC"
+                },
+                {
+                    "content": "my roommates are strugglinggg rn in it bc of the pure quantity of work and very specific requirements for said work",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1gvcisx/comment/ly4cle8/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-11-20 16:30:38 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "MUS",
+            "code": "132",
+            "name": "Popular Music Studies",
+            "comments": [
+                {
+                    "content": "Lectures not required but the quiz information basically only came from lecture/readings. You could still do fairly well on the quizzes though since you have two tries. Discussion was mandatory but there is an online section that does discussion post. Exams were easy, essays pretty easy, and I never did a single reading and got an A+. Also a lot of extra credit",
+                    "url": "https://www.reddit.com/r/UIUC/comments/190gj9u/comment/kgo7oy1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-01-07 02:04:18 UTC"
+                },
+                {
+                    "content": "t's all online and everything is pretty easy. because the winter semester is like 4 weeks long, i have to do 2 modules each week (both due on friday's), but it's not bad at all. for one module, there's a content and listening quiz, which are all open note. you can get out of the listening quiz if you attend zoom sessions that the professor holds, but ive never been to one. ",
+                    "url": "https://www.reddit.com/r/UIUC/comments/190gj9u/comment/kgovx32/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-01-07 04:55:50 UTC"
+                },
+                {
+                    "content": "Music is easier when you master and keep practicing those terms.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1f9u53d/comment/lloaowe/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-09-05 19:10:02 UTC"
+                },
+                {
+                    "content": "I got an A in the class and still don't understand what melody, harmony, tempo or beat is . You don't need to know you will be fine.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1f9u53d/comment/llof5oy/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-09-05 19:33:42 UTC"
+                },
+                {
+                    "content": "MUS 132 is a fun class especially if you like listening to music (who doesn't).",
+                    "url": "https://www.reddit.com/r/UIUC/comments/tr6rcr/comment/i2lrpky/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-03-29 19:29:50 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "MUS",
+            "code": "133",
+            "name": "Intro to World Music",
+            "comments": [
+                {
+                    "content": "Just took 133 this semester, has been insanely easy. Unlimited quiz attempts like someone's already said in this thread, but they don't tell you what was the right answer. Still not difficult, just requires a bit of patience and writing down all your answers each time.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/n37xi2/comment/gwrag9k/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-05-03 07:42:53 UTC"
+                },
+                {
+                    "content": "MUS 133 is a decently interesting class, touches on a lot of culture/geography to better help you understand the music. As for the workload, I was able to write the essays and do the discussion posts after retaining very little information throughout my one week speed run of the course. Take 133",
+                    "url": "https://www.reddit.com/r/UIUC/comments/n37xi2/comment/gwrod85/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-05-03 11:00:28 UTC"
+                },
+                {
+                    "content": "Took it this past fall and unless if I missed them in Canvas, a lot of the lectures weren't posted, or at least by exam time. It's good going to lecture to take notes on slides and what the prof says about the songs mentioned in the slides because it'll make the exams super easy to control + f to find the answers",
+                    "url": "https://www.reddit.com/r/UIUC/comments/18zhq21/comment/kgif2hz/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-01-05 23:58:26 UTC"
+                },
+                {
+                    "content": "I took this class last semester and stopped going to lecture pretty early on. While the lectures and slides aren't posted, the professor posts lecture outlines, which usually cover all of the exam answers. Even if something isn't on the outline, it's usually pretty easy to google or guess since you have 2 attempts on the exams",
+                    "url": "https://www.reddit.com/r/UIUC/comments/18zhq21/comment/kgli42n/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-01-06 16:05:17 UTC"
+                },
+                {
+                    "content": "I took it last summer, workload was light for a summer class. I think they let my class have access to all the work we had to do for the whole summer so it was very self paced and not too difficult.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1432oh6/comment/jn9j7c8/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-06-07 15:14:10 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "REL",
+            "code": "110",
+            "name": "World Religions",
+            "comments": [
+                {
+                    "content": "I took Rel 110 and it isn't too difficult if you do a few hours of reading/studying everyday. In my class there were tests that you could take like 2-3 times if you ended up not doing so well. Not difficult but also not an easy A from my experience",
+                    "url": "https://www.reddit.com/r/UIUC/comments/18kxkow/comment/kdu6gxb/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-12-18 02:13:01 UTC"
+                },
+                {
+                    "content": "I took it over the winter and found it to be the easiest class I've ever taken. I put maybe 1-1.5 hours into it per week tops.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/18kxkow/comment/kdu91jk/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-12-18 02:32:05 UTC"
+                },
+                {
+                    "content": "It was pretty easy when I did it. The lecture was online and the discussions were in person.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/18m7zn7/comment/ke2vh4g/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-12-19 19:51:29 UTC"
+                },
+                {
+                    "content": "Not sure how it is over an entire semester, but I took it over winter break and didn't find it too bad. Decent amount of reading and writing to do, but I found some of the material kind of interesting. I don't think I've seen anyone say it's a terrible or hard class",
+                    "url": "https://www.reddit.com/r/UIUC/comments/o4xty4/comment/h2jvpp9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-06-21 16:28:12 UTC"
+                },
+                {
+                    "content": "Took it Fall 2019 and got an A+. Make sure you do all the assignments and extra credit so you can slack on the midterm and final a bit. Not bad but busy work imo. Never step foot into lecture",
+                    "url": "https://www.reddit.com/r/UIUC/comments/o4xty4/comment/h2ky6m6/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-06-21 21:16:44 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "THEA",
+            "code": "110",
+            "name": "Broadway Musicals",
+            "comments": [
+                {
+                    "content": "The professor is super chill and the TAs are incredibly understanding. The class is minimal effort too; if you pay attention during lectures the exams are a breeze. The essays are really easy as well; there's 3 of them and 2 of them are based on your opinion. There's also no final for the class! ",
+                    "url": "https://www.reddit.com/r/UIUC/comments/14grc82/comment/jp73vdd/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-06-23 07:45:51 UTC"
+                },
+                {
+                    "content": "Really easy class and also fun. You need to watch a musical though, I found that fun but it depends on the person",
+                    "url": "https://www.reddit.com/r/UIUC/comments/pa30iy/comment/ha1sp23/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-08-23 16:32:48 UTC"
+                },
+                {
+                    "content": "The mandatory performance viewing this semester was the student's choice of 5 different musicals available online. They're all about 2 and a half hours, but I think the selections depend on which TA you get? In general, the class was very easy and had a light workload.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/k411fk/comment/ge67uy3/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-11-30 18:32:11 UTC"
+                },
+                {
+                    "content": "110 only has 3 exams and they are done in class.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/dt6ow3/comment/f6v0db4/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2019-11-08 00:34:19 UTC"
+                }
+            ]
         }
-        ...
     ],
     "Social and Behavioral Science": [
         {
-            "subject": "ECON",
-            "code": "101",
-            "name": "Intro to Economics",
-            "comments": {
-                "content": "Some comment on the course",
-                "url": "https://www.google.com"
-            }
+            "subject": "SHS",
+            "code": "222",
+            "name": "Language & Culture of Deaf Communities",
+            "comments": [
+                {
+                    "content": "I took SHS 222 this semester. It's super easy and only half a semester, and you have a few videos or readings to do each week.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/g4adkj/comment/fnwenoq/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-04-19 17:22:18 UTC"
+                },
+                {
+                    "content": "The course this semester is an absolute mess. There are no lectures. It's just a bunch of readings and YouTube videos. The discussion posts and reflection are a waste of time. In total, you're required to write 900 words per week for the discussion and reflection.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/lcosm1/dont_take_shs_222/",
+                    "time": "2021-02-04 20:10:25 UTC"
+                },
+                {
+                    "content": "I spent like an hour max each day, but depends on the assignment. The quizzes took max 10-15 minutes. The discussions took the longest time to collect and write the information so usually like an hour for me, but you could finish in 30 mins really. The reflections also in like 10 mins max. So I spent three days per week on these assignments for not more than 2 hours per week.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1hrw227/comment/m518rjf/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2025-01-02 17:06:07 UTC"
+                },
+                {
+                    "content": "It's not hard just a lot of busy work which you can all find on various quizlets lets posted online. Remember to keep track of due dates!",
+                    "url": "https://www.reddit.com/r/UIUC/comments/twhv9m/comment/i3fvdm2/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-04-05 02:36:13 UTC"
+                },
+                {
+                    "content": "So much busy work, but the work combined in a week will take like 30 minutes max. The quizzes are doable. The grading depends on the grader and if they take the class that seriously.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1i9goue/comment/m91vpo5/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2025-01-25 06:18:31 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "ANTH",
+            "code": "103",
+            "name": "Anthro in a Changing World",
+            "comments": [
+                {
+                    "content": "i took anth103 this semester and it was super easy. i never did the 'required' readings and i passed with an A. you just have a discussion board and quiz every week and a small project every other week. everything is open note and open book, including the exams. ",
+                    "url": "https://www.reddit.com/r/UIUC/comments/qoahb4/comment/hjlvo39/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-11-06 22:52:53 UTC"
+                },
+                {
+                    "content": "Just took anth 103. Everything online. Exams are not proctored. And answers are in Quizlet. Every week u have a 300 word discussion and 2 100 word reply's. They expect 1 quote from book for main post (don't have to do reading just pull a quote). But super easy discussion takes 1 hour max. ",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1017gay/comment/j2nv6ww/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-01-02 18:48:10 UTC"
+                },
+                {
+                    "content": "ANTH 103 is super easy. There's a lot of readings but I didn't do most of them and got an A",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1017gay/comment/j2nxpy1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-01-02 19:04:24 UTC"
+                },
+                {
+                    "content": "I'm currently taking it in person w professor orta and it's really easy. There are ~20 pages of readings for each class but you can just quickly skim (or even skip honestly). There's only a total of 4 discussions posts of like 500 words each so it's not a lot of writing either. Personally, it's not my favorite gened, but I wouldn't say it's boring either.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1fzid38/comment/lr2020v/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-10-09 06:29:07 UTC"
+                },
+                {
+                    "content": "I took Anth 103 over the summer, super easy class, everything is on quizlet. you can do the readings if you want but i never did them and ended the class with an A.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1fzid38/comment/lr1z38x/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-10-09 06:17:56 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "HDFS",
+            "code": "105",
+            "name": "Intro to Human Development",
+            "comments": [
+                {
+                    "content": "i took hdfs 105 this past semester and i really enjoyed it. the class was very easy imo (only a few exams-all open note, discussion once a week, short assignments with a lot of time to complete them, etc.). you do have to buy the textbook to do the quizzes, but overall a good class.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/s3j1qe/comment/hslbly2/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-01-14 05:22:02 UTC"
+                },
+                {
+                    "content": "HDFS 105 was super chill no exams just hws which are unlimited mc and recorded lectures when I took it at least. Only bad thing is the hw is on McGraw Hill which you gotta pay like $90 for. Content was pretty interesting too",
+                    "url": "https://www.reddit.com/r/UIUC/comments/tbu9js/comment/i0ljgpd/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-03-14 09:29:11 UTC"
+                },
+                {
+                    "content": "Don't buy the physical book, get the one online that comes with the hw, unless u like physical books.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/wv6qp4/comment/ilec4hy/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-08-23 01:12:03 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "ACE",
+            "code": "255",
+            "name": "Economics of Food and Environmental Justice",
+            "comments": [
+                {
+                    "content": "I took ACE 255 last year (Econ of food) and it was actually the easiest fucking class in the world. Just pull up to lectures and you'll get an A. You literally only have to do like one or two assignments the entire semester",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1egah5x/comment/lfsz3fm/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-07-31 12:42:34 UTC"
+                },
+                {
+                    "content": "The problem with 'Justice' classes is that they bring up history and how we got to where we are. I say this because as a person who's taken a lot of classes with food and environmental and agriculture and other law/justice classes, there was overlap plus the fact that you go over things that you already know, or maybe didn't know, and that it's still a problem to this day. So all in all it wasn't a complete waste of time like some classes may be",
+                    "url": "https://www.reddit.com/r/UIUC/comments/qqx0o7/comment/hkebj7v/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-11-13 00:01:36 UTC"
+                },
+                {
+                    "content": "ace 255 - only packback discussions, some short assignments, super short mc quizzes with multiple attempts",
+                    "url": "https://www.reddit.com/r/UIUC/comments/yjdqy9/comment/iut5t66/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-11-02 20:51:40 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "KIN",
+            "code": "249",
+            "name": "Sport & Modern Society",
+            "comments": [
+                {
+                    "content": "Honestly the hardest thing in the course was there were 1-2 discussion posts where the assigned material included a video, which meant it was harder to skim through than the ones where the material was just texts, and that was still a non-issue.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/178u21v/comment/k53hj7v/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-10-16 10:08:11 UTC"
+                },
+                {
+                    "content": "I would say it depends on the TA in the group. Some TA are not friendly in giving points.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/m6r7lr/comment/k7zlqss/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-11-05 22:10:32 UTC"
+                },
+                {
+                    "content": "online and really easy. As long as you complete the assignments, it's a guaranteed A.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/rzbtqp/comment/hru3o5s/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-01-08 22:40:05 UTC"
+                },
+                {
+                    "content": "KIN 249 is so easy I literally spent max 2 hours on work per week on it",
+                    "url": "https://www.reddit.com/r/UIUC/comments/m86yc7/comment/grg308u/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-03-19 04:16:05 UTC"
+                },
+                {
+                    "content": "you can pass the exam if you look at the lesson powerpoints for each lesson he posts on compass.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/t3nw6d/comment/hyvzhlp/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-03-01 07:57:53 UTC"
+                }
+            ]
         }
-        ...
+    ],    
+    "Natural Sciences and Technology": [
+        {
+            "subject": "PLPA",
+            "code": "200",
+            "name": "Plants, Pathogens, and People",
+            "comments": [
+                {
+                    "content": "Every week you watch a 1.5-2.5 hour lecture lecture and do a short quiz about it. Then you do a writing assignment. You either work on one of the papers or do a short (1 paragraph) writing assignment, alternating each week. For the papers, there are 3 phases, and you do one each week (so like you'd do a phase weeks 2, 4, then 6). First phase is most of the work, where you write a draft (2 page minimum), second phase you modify and add to the draft (3 page minimum). Then for the third phase you modify your draft if you need to based on feedback and then turn it in. The first 2 phases are for a completion grade, the third is the one that's graded. And if you do the drafts, you'll probably get 100 on the third phase because most of what you need to do is just follow the feedback from the drafts. Then there is a final which is just a bunch of quiz questions.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/s8de1o/comment/htfzxlk/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-01-20 10:54:15 UTC"
+                },
+                {
+                    "content": "I took it a few semesters ago, I had fun, it was all online and asynchronous which was convenient. There were weekly deadlines and grading on the writing assignments was very clear.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/s8de1o/comment/hthgboa/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-01-20 17:39:12 UTC"
+                },
+                {
+                    "content": "easy class just do what is assigned and you get an A",
+                    "url": "https://www.reddit.com/r/UIUC/comments/s8de1o/comment/htgsvy0/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-01-20 15:13:49 UTC"
+                },
+                {
+                    "content": "I took PLPA 200 lastSpring and it was pretty laid back. There's no required purchases from what I remember as they provide you all the lecture material and additional resources you may need.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1h6aciy/comment/m0e704i/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-12-04 17:00:49 UTC"
+                },
+                {
+                    "content": "PLPA 200: you learn a lot about the history of agriculture and how it shaped history overall, also you get tons of feedback on drafts for essays so the grading is nice :)",
+                    "url": "https://www.reddit.com/r/UIUC/comments/j5s7d4/comment/g8a07lg/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-10-10 02:12:04 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "ANTH",
+            "code": "246",
+            "name": "Forensic Science",
+            "comments": [
+                {
+                    "content": "I liked it and would recommend it. The quizzes are open note. The extent of your work per week is watch the lecture, do the quiz, and do a discussion post. It's not that bad and it's an engaging class if you like forensic science",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1hdjfv9/comment/m1ylmn4/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-12-14 02:39:58 UTC"
+                },
+                {
+                    "content": "Yes. Take it. No stakes at play, content is fun too. I ended with an A in the 8 week ONL section after putting in one to two hours every week. It's all unproctored online exams and short discussion posts that require little effort to get full marks. There is assigned reading but I never found myself needing to do it since the online video lectures was enough to get an A on the exams. Not sure if they use the moodle LMS anymore though.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1hdjfv9/comment/m1zt5go/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-12-14 09:24:13 UTC"
+                },
+                {
+                    "content": "I just took it this semester for POT A. Each week I had to watch the lecture (which always had a long estimated time for doing but I was always able to do it in less without taking notes because they're not necessary since you can go back and review the lectures after you complete them). I then had to do an activity (always easy and always less then half an hour to do). Finally I would have to do a discussion post with two response posts (a little time consuming but not too bad) and a weekly quiz which was not proctored so you could look back on the lecture material for help with it.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/tinc2r/comment/i1f220s/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-03-20 16:14:43 UTC"
+                },
+                {
+                    "content": "Yeah this class isn't bad at all👍🏽. Review the lecture for the assignments and you should be chillin",
+                    "url": "https://www.reddit.com/r/UIUC/comments/tinc2r/comment/i1gmzep/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-03-20 22:51:11 UTC"
+                },
+                {
+                    "content": "I took it online with Antoniuk. It was easy to get an A, but does have a fair amount of busy work!",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1hekerx/comment/m24d11u/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-12-15 04:07:42 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "FSHN",
+            "code": "120",
+            "name": "Contemporary Nutrition",
+            "comments": [
+                {
+                    "content": "I'm taking Fshn 120 right now ands it's very straightforward and simple. The lectures are interesting and the homework is manageable",
+                    "url": "https://www.reddit.com/r/UIUC/comments/12jca3o/comment/jfy76xi/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-04-12 11:19:12 UTC"
+                },
+                {
+                    "content": "I took 120, it's a very interesting class and the professor makes the class quite enjoyable, plus the grading system is very forgivable",
+                    "url": "https://www.reddit.com/r/UIUC/comments/12jca3o/comment/jgbyx4a/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-04-15 07:19:05 UTC"
+                },
+                {
+                    "content": "The instructor makes publicly available a TON of information about FSHN 120, including the syllabus, sample assignments, and several lecture videos: https://publish.illinois.edu/nutrition-fshn120/",
+                    "url": "https://www.reddit.com/r/UIUC/comments/rgwr04/comment/hon9gy4/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-12-15 14:14:09 UTC"
+                },
+                {
+                    "content": "I took it Spring 2020. Interesting course content, awesome instructor, pretty light courseload. idk how much has changed since I took it but IIRC you basically had like 2 easy assignments per week, 4 (?) pretty short review papers, plus a few exams and a final. Lecture attendance was optional but there was extra credit if you went, and the syllabus was very generous - I remember I missed the first grading paper, and I was still able to skip the last paper and the final. Would def recommend",
+                    "url": "https://www.reddit.com/r/UIUC/comments/rgwr04/comment/honxk5u/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-12-15 16:59:41 UTC"
+                },
+                {
+                    "content": "I thought it was super easy and very easy to place on the back burner. I really can't see how anyone that cares about getting an A wouldn't be able to get an A. On top of the material being easy, the grading is more generous than it needs to be, and the support is way better than it needs to be (Quizlets made for you, very good review slides, video supplements, etc). Not that any of that is a bad thing, of course.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/eb7khu/comment/fb38tc7/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2019-12-16 03:28:54 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "ABE",
+            "code": "152",
+            "name": "The Science of Food and How it Relates to You",
+            "comments": [
+                {
+                    "content": "It has exams but they're open note and multiple choice-- ABE 152.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1g5ymtk/comment/lsetyjt/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-10-17 19:26:31 UTC"
+                },
+                {
+                    "content": "Yup the class is pretty easy. As long as you attend the lectures and do the assignments you'll get an A.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/10dxozp/comment/k90y6wz/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-11-13 04:13:24 UTC"
+                },
+                {
+                    "content": "ABE 152, pretty much do nothing, attend online class, get an A+. I literally didn't submit an assignment that was worth 30% of the grade and told the professor (Prof Kalita) that I was busy with other classes, he decided to give me full credit for it. Probably the best and easiest class that satisfies nat sci and tech, I think it also satisfies non western. Highly recommended.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1d864j8/comment/l76oz0x/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-06-05 07:13:49 UTC"
+                }
+            ]
+        }
+    ],    "Quantitative Reasoning": [
+        {
+            "subject": "CS",
+            "code": "101",
+            "name": "Intro Computing: Engrg & Sci",
+            "comments": [
+                {
+                    "content": "Unless the professor changed from Mattox, it is the easiest class ever",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1co2nk9/comment/l3bbav3/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-05-09 17:59:21 UTC"
+                },
+                {
+                    "content": "I took CS 101 this semester with no prior coding experience, and if I'm being honest it was not a very good course this semester.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1co2nk9/comment/l3brbnz/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-05-09 19:31:22 UTC"
+                },
+                {
+                    "content": "I took it last semester. I was new to programming/Python although I'd consider myself very tech savvy. The lessons are very easy and you can do them whenever before the due date. The homeworks varied in difficulty and with some being pretty difficult to conceptualize, but still manageable. The labs are usually easy enough, with some being a bit more challenging. However you can ask for help from the TAs, so it's not a big deal. The project was pretty easy for me although I ended up doing ~90% of it because my group decided to only start the problems a day or two before the due date for each milestone. I wouldn't worry about it at all tbh, it was far and away my easiest class last semester.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/vbukr3/comment/icahvzp/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-06-14 04:08:23 UTC"
+                },
+                {
+                    "content": "Even if you don't know shit about coding (as I did going in), you'll be fine, the online lessons are very well structured and teach you everything you need to know. No test, just hw, lessons, and a project, it's basically an asynchronous class that has an hour lab per week that's cake. The lessons are easy, graded but unlimited attempts and supposed to help you learn. The last few hws are kinda hard but chegg will be your friend and you get a drop. The project is kinda hard but if u have a competent group it's more than manageable. ",
+                    "url": "https://www.reddit.com/r/UIUC/comments/vbukr3/comment/icamhp9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-06-14 04:56:44 UTC"
+                },
+                {
+                    "content": "I use to have a business major friend that would come into my dorm room and beg for help on his CS101 homework 5 minutes before it was due. I mean I got some of the problems done lol. So just don't do that and you'll be fine. Even if you do find it difficult, you'll be surrounded by people that can help you",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1co2nk9/comment/l3bi98v/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-05-09 18:39:36 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "CS",
+            "code": "105",
+            "name": "Intro Computing: Non-Tech",
+            "comments": [
+                {
+                    "content": "I took it freshman first sem, it was honestly pretty doable and fun at times. It can get pretty tedious going through the textbook every week and answering the required questions for the assignments. But as long as you do those and pay attention in lecture, the exams should be fairly easy.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/wpxu9k/comment/ikjdj85/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-08-16 16:27:55 UTC"
+                },
+                {
+                    "content": "i took this class with absolutely zero experience but there are practice tests available ab a week before exams and they're SUPER helpful and I was able to get an A in the class",
+                    "url": "https://www.reddit.com/r/UIUC/comments/wpxu9k/comment/ikk8c3y/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-08-16 19:41:34 UTC"
+                },
+                {
+                    "content": "From what I've heard CS105 is basically useless and everyone I know that came out of that class says they still don't know how to program.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/fqy0c9/comment/flt1z9c/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-03-29 04:41:09 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "ATMS",
+            "code": "120",
+            "name": "Sever and Hazardous Weather",
+            "comments": [
+                {
+                    "content": "You'll likely get a B or C depending on how much work you put in. If you follow the videos she does step by step for the assignments, it's doabled. It's not fun unless it's your thing.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1c1o98n/comment/kz65rj7/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-04-12 01:36:56 UTC"
+                },
+                {
+                    "content": "It's easy but not as easy compared to 2+ years ago. Exams are inclass now due to the department. Homework is alright, use the forum for help. Nice extra credit. I really enjoyed learning in that class. Professor Eric is one of the best",
+                    "url": "https://www.reddit.com/r/UIUC/comments/9kihyl/comment/e6zodib/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2018-10-01 21:00:17 UTC"
+                },
+                {
+                    "content": "My atmospheric science friend said that Snodgrass recently made it harder (supposedly) because of pressure from higher-ups in the University. Take that with a grain of salt, but I don't think it's as easy as it used to be.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/9kihyl/comment/e6zmm4q/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2018-10-01 20:36:30 UTC"
+                },
+                {
+                    "content": "i would recommend ATMS 120. I took with choate last semester. it may seem like a lot of work at first but you'll get used to it. she offers a lot of help when needed.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/mv5dz6/comment/gvcc099/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-04-21 16:51:31 UTC"
+                },
+                {
+                    "content": "Pretty light coursework. Take Home labs and lecture attendance carry most of the grade, just do okay on the exams and you'll be fine.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/epxtyc/comment/femi33y/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-01-17 10:24:54 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "CHLH",
+            "code": "274",
+            "name": "Introduction to Epidemiology",
+            "comments": [
+                {
+                    "content": "Not bad at all. There is weekly homework questions but the textbook has the answers to like half of them at the end of each chapter. Also the textbook is on libgen.li (i took it during the 2nd 8weeks of Sp2020/beginning of covid so idk if things changed)",
+                    "url": "https://www.reddit.com/r/UIUC/comments/tb6uh5/comment/i05fxkq/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-03-10 20:19:36 UTC"
+                },
+                {
+                    "content": "its really really easy",
+                    "url": "https://www.reddit.com/r/UIUC/comments/tb6uh5/comment/i073tsl/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-03-11 03:33:55 UTC"
+                },
+                {
+                    "content": "i took it when covid was freshly starting to hit so i was online for all of it (not sure if you are as well) and as long as you have common sense you will pass :)",
+                    "url": "https://www.reddit.com/r/UIUC/comments/tb6uh5/comment/i08l0up/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-03-11 13:34:13 UTC"
+                },
+                {
+                    "content": "I got an A- last semester and put no effort into this class. The math here isn't bad you're always given an equation and it's just plugging numbers in. Each week you have problem sets due but they're super easy and you can find the answers online. The discussions are about current events related to epidemiology and they're also easy. The hardest part for me were probably the exams but like I said earlier, I didn't read the book or watch the lecture videos.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/fg1hld/comment/fk2x331/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-03-10 03:34:36 UTC"
+                },
+                {
+                    "content": "From what I remember, there are equations that you have to use. Not math heavy, but there are some calculations you have to do to answer some questions. General algebra is what I remember mostly",
+                    "url": "https://www.reddit.com/r/UIUC/comments/fg1hld/comment/fk1y28r/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-03-09 21:25:58 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "STAT",
+            "code": "107",
+            "name": "Data Science Discovery",
+            "comments": [
+                {
+                    "content": "It's easy! I took it this semester, there's tons of supports and overall the content comes at a pretty slow pace. Karle and Wade are awesome too, and they're always working hard to improve the course.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/18ioxe5/comment/kdf3mz2/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-12-15 03:56:34 UTC"
+                },
+                {
+                    "content": "The level of statistical concepts covered in STAT 100 and STAT 107 is somewhat similar, and most of it should be the same with maybe some differences but nothing too big. The programming portion assumes no prior experience with Python and everything is taught from the ground up assuming you are a total beginner. The professors are both really great and enthusiastic about the course and enjoy teaching it. I think you'll have a fun time in the course!",
+                    "url": "https://www.reddit.com/r/UIUC/comments/18ioxe5/comment/kdf27a5/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-12-15 03:45:54 UTC"
+                },
+                {
+                    "content": "I just finished this class, but I had some prior programming experience. I had no statistic experience before though so that should probably help you. Overall it's pretty doable I'd say, they take the programming pretty slow at first. Just make sure you do all of the homework, that really helps with learning everything and you can keep practicing even after you finish it. There's also a lot of extra credit to earn (make sure you fill out the entire lecture notebook for the end of the semester).",
+                    "url": "https://www.reddit.com/r/UIUC/comments/18ioxe5/comment/kdetf1k/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-12-15 02:42:05 UTC"
+                },
+                {
+                    "content": "Class was easy but tests were hard for me so I did all the extra credit to buffer any flubs. I ended up find on all the tests besides the final. Yet I got an A \ud83d\ude24.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/18ioxe5/comment/kdp32y0/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-12-17 01:25:00 UTC"
+                },
+                {
+                    "content": "There is so much extra credit opportunities also",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1i25ros/comment/m7bqr5j/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2025-01-15 19:49:14 UTC"
+                }
+            ]
+        }
+    ], 
+    "Cultural Studies: Non-Western Cultures": [
+        {
+            "subject": "MUS",
+            "code": "133",
+            "name": "Intro to World Music",
+            "comments": [
+                {
+                    "content": "Just took 133 this semester, has been insanely easy. Unlimited quiz attempts like someone's already said in this thread, but they don't tell you what was the right answer. Still not difficult, just requires a bit of patience and writing down all your answers each time.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/n37xi2/comment/gwrag9k/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-05-03 07:42:53 UTC"
+                },
+                {
+                    "content": "MUS 133 is a decently interesting class, touches on a lot of culture/geography to better help you understand the music. As for the workload, I was able to write the essays and do the discussion posts after retaining very little information throughout my one week speed run of the course. Take 133",
+                    "url": "https://www.reddit.com/r/UIUC/comments/n37xi2/comment/gwrod85/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-05-03 11:00:28 UTC"
+                },
+                {
+                    "content": "Took it this past fall and unless if I missed them in Canvas, a lot of the lectures weren't posted, or at least by exam time. It's good going to lecture to take notes on slides and what the prof says about the songs mentioned in the slides because it'll make the exams super easy to control + f to find the answers",
+                    "url": "https://www.reddit.com/r/UIUC/comments/18zhq21/comment/kgif2hz/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-01-05 23:58:26 UTC"
+                },
+                {
+                    "content": "I took this class last semester and stopped going to lecture pretty early on. While the lectures and slides aren't posted, the professor posts lecture outlines, which usually cover all of the exam answers. Even if something isn't on the outline, it's usually pretty easy to google or guess since you have 2 attempts on the exams",
+                    "url": "https://www.reddit.com/r/UIUC/comments/18zhq21/comment/kgli42n/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-01-06 16:05:17 UTC"
+                },
+                {
+                    "content": "I took it last summer, workload was light for a summer class. I think they let my class have access to all the work we had to do for the whole summer so it was very self paced and not too difficult.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1432oh6/comment/jn9j7c8/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-06-07 15:14:10 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "ABE",
+            "code": "152",
+            "name": "The Science of Food and How it Relates to You",
+            "comments": [
+                {
+                    "content": "It has exams but they're open note and multiple choice-- ABE 152.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1g5ymtk/comment/lsetyjt/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-10-17 19:26:31 UTC"
+                },
+                {
+                    "content": "Yup the class is pretty easy. As long as you attend the lectures and do the assignments you'll get an A.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/10dxozp/comment/k90y6wz/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-11-13 04:13:24 UTC"
+                },
+                {
+                    "content": "ABE 152, pretty much do nothing, attend online class, get an A+. I literally didn't submit an assignment that was worth 30% of the grade and told the professor (Prof Kalita) that I was busy with other classes, he decided to give me full credit for it. Probably the best and easiest class that satisfies nat sci and tech, I think it also satisfies non western. Highly recommended.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1d864j8/comment/l76oz0x/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-06-05 07:13:49 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "CWL",
+            "code": "207",
+            "name": "Asian American Studies",
+            "comments": [
+                {
+                    "content": "I took CWL 207 in spring 2021. Very easy class, probably spent 15 hours the entire semester on it. It's also interesting, I'd recommend",
+                    "url": "https://www.reddit.com/r/UIUC/comments/s73k61/comment/ht7oxpj/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-01-18 19:06:21 UTC"
+                },
+                {
+                    "content": "I took CWL 207 and it was quite easy, very little work apart from the midterm/final. The movies were enjoyable as well so I'd recommend it",
+                    "url": "https://www.reddit.com/r/UIUC/comments/s73k61/comment/ht7t8hq/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-01-18 19:32:57 UTC"
+                },
+                {
+                    "content": "TAKE THIS CLASS! If not for the content, for the professor. Professor Mehta is one of the coolest profs I've ever had.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/2eo66o/comment/ck1zhhd/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2014-08-27 17:00:18 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "REL",
+            "code": "110",
+            "name": "World Religions",
+            "comments": [
+                {
+                    "content": "I took Rel 110 and it isn't too difficult if you do a few hours of reading/studying everyday. In my class there were tests that you could take like 2-3 times if you ended up not doing so well. Not difficult but also not an easy A from my experience",
+                    "url": "https://www.reddit.com/r/UIUC/comments/18kxkow/comment/kdu6gxb/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-12-18 02:13:01 UTC"
+                },
+                {
+                    "content": "I took it over the winter and found it to be the easiest class I've ever taken. I put maybe 1-1.5 hours into it per week tops.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/18kxkow/comment/kdu91jk/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-12-18 02:32:05 UTC"
+                },
+                {
+                    "content": "It was pretty easy when I did it. The lecture was online and the discussions were in person.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/18m7zn7/comment/ke2vh4g/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-12-19 19:51:29 UTC"
+                },
+                {
+                    "content": "Not sure how it is over an entire semester, but I took it over winter break and didn't find it too bad. Decent amount of reading and writing to do, but I found some of the material kind of interesting. I don't think I've seen anyone say it's a terrible or hard class",
+                    "url": "https://www.reddit.com/r/UIUC/comments/o4xty4/comment/h2jvpp9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-06-21 16:28:12 UTC"
+                },
+                {
+                    "content": "Took it Fall 2019 and got an A+. Make sure you do all the assignments and extra credit so you can slack on the midterm and final a bit. Not bad but busy work imo. Never step foot into lecture",
+                    "url": "https://www.reddit.com/r/UIUC/comments/o4xty4/comment/h2ky6m6/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-06-21 21:16:44 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "ANTH",
+            "code": "103",
+            "name": "Anthro in a Changing World",
+            "comments": [
+                {
+                    "content": "i took anth103 this semester and it was super easy. i never did the 'required' readings and i passed with an A. you just have a discussion board and quiz every week and a small project every other week. everything is open note and open book, including the exams. ",
+                    "url": "https://www.reddit.com/r/UIUC/comments/qoahb4/comment/hjlvo39/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-11-06 22:52:53 UTC"
+                },
+                {
+                    "content": "Just took anth 103. Everything online. Exams are not proctored. And answers are in Quizlet. Every week u have a 300 word discussion and 2 100 word reply's. They expect 1 quote from book for main post (don't have to do reading just pull a quote). But super easy discussion takes 1 hour max. ",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1017gay/comment/j2nv6ww/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-01-02 18:48:10 UTC"
+                },
+                {
+                    "content": "ANTH 103 is super easy. There's a lot of readings but I didn't do most of them and got an A",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1017gay/comment/j2nxpy1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-01-02 19:04:24 UTC"
+                },
+                {
+                    "content": "I'm currently taking it in person w professor orta and it's really easy. There are ~20 pages of readings for each class but you can just quickly skim (or even skip honestly). There's only a total of 4 discussions posts of like 500 words each so it's not a lot of writing either. Personally, it's not my favorite gened, but I wouldn't say it's boring either.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1fzid38/comment/lr2020v/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-10-09 06:29:07 UTC"
+                },
+                {
+                    "content": "I took Anth 103 over the summer, super easy class, everything is on quizlet. you can do the readings if you want but i never did them and ended the class with an A.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1fzid38/comment/lr1z38x/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-10-09 06:17:56 UTC"
+                }
+            ]
+        }
+    ], "Advanced Composition": [
+        {
+            "subject": "MACS",
+            "code": "101",
+            "name": "Introduction to the Media",
+            "comments": [
+                {
+                    "content": "Took it last semester. I got an A. Fairly easy class with about About 8x 1-2 page papers, a final paper and a final video project that isn't bad. No exams or quizzes. I recommend taking it with prof. helmke if you can.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/k5xn91/comment/geib2id/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-12-03 18:03:47 UTC"
+                },
+                {
+                    "content": "It's an easy and chill class. It can be interesting in that it's media, but it's still like an academic view of it, which may not be super interesting to you.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/k5xn91/comment/gehl42s/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-12-03 14:30:49 UTC"
+                },
+                {
+                    "content": "easy class lowkey you just gotta show up attendance is graded",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1gl2btx/comment/lvrnv67/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-11-06 19:36:46 UTC"
+                },
+                {
+                    "content": "Yep. Took it last semester. Didn't have Knipp but I think he runs the whole course, other sections are taught by grad students. It's cake. Just show up for attendance points and give some effort on your papers and you will get an A.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1gl2btx/comment/lvuqyko/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-11-07 05:43:19 UTC"
+                },
+                {
+                    "content": "Definitely MACS 101. Take it with Prof. William Helmke if you can. He's a super cool and great guy as well as a great teacher. Not a super heavy workload too.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/goofta/comment/frhm0da/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-05-22 21:18:27 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "ANSC",
+            "code": "205",
+            "name": "World Animal Resources",
+            "comments": [
+                {
+                    "content": "ANSC 205. Professor is usually Dr. Emmert and he's a chill grader. You write about animals. Straightforward syllabus",
+                    "url": "https://www.reddit.com/r/UIUC/comments/17eovg7/comment/k6610zk/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-10-23 22:04:41 UTC"
+                },
+                {
+                    "content": "Very easy and informative class. Emmert is an awesome professor! There are 5 papers total with a short final course summary/opinion piece. I also took it online last semester.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/g9g9hq/comment/fotai7e/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-04-28 04:35:47 UTC"
+                },
+                {
+                    "content": "I'm not saying it's super easy. You do have to put some time and effort, but grading was very generous. Professor let us submit our first draft then he'd give some comments and feedback, and we'd fix the draft and submit the final version. Just watch the lectures in some 1.5x speed while doing the weekly quiz. I'd definitely recommend you to take this one. ",
+                    "url": "https://www.reddit.com/r/UIUC/comments/gz8l4v/comment/ftf26rf/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-06-08 22:47:27 UTC"
+                },
+                {
+                    "content": "Very easy! I really do not enjoy writing at all and this class wasn't bad. If I remember correctly, I think he also curved. He graded my last paper pretty generously as well",
+                    "url": "https://www.reddit.com/r/UIUC/comments/gz8l4v/comment/ftfieba/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-06-09 01:18:16 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "PLPA",
+            "code": "200",
+            "name": "Plants, Pathogens, and People",
+            "comments": [
+                {
+                    "content": "Every week you watch a 1.5-2.5 hour lecture lecture and do a short quiz about it. Then you do a writing assignment. You either work on one of the papers or do a short (1 paragraph) writing assignment, alternating each week. For the papers, there are 3 phases, and you do one each week (so like you'd do a phase weeks 2, 4, then 6). First phase is most of the work, where you write a draft (2 page minimum), second phase you modify and add to the draft (3 page minimum). Then for the third phase you modify your draft if you need to based on feedback and then turn it in. The first 2 phases are for a completion grade, the third is the one that's graded. And if you do the drafts, you'll probably get 100 on the third phase because most of what you need to do is just follow the feedback from the drafts. Then there is a final which is just a bunch of quiz questions.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/s8de1o/comment/htfzxlk/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-01-20 10:54:15 UTC"
+                },
+                {
+                    "content": "I took it a few semesters ago, I had fun, it was all online and asynchronous which was convenient. There were weekly deadlines and grading on the writing assignments was very clear.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/s8de1o/comment/hthgboa/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-01-20 17:39:12 UTC"
+                },
+                {
+                    "content": "easy class just do what is assigned and you get an A",
+                    "url": "https://www.reddit.com/r/UIUC/comments/s8de1o/comment/htgsvy0/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-01-20 15:13:49 UTC"
+                },
+                {
+                    "content": "I took PLPA 200 lastSpring and it was pretty laid back. There's no required purchases from what I remember as they provide you all the lecture material and additional resources you may need.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1h6aciy/comment/m0e704i/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-12-04 17:00:49 UTC"
+                },
+                {
+                    "content": "PLPA 200: you learn a lot about the history of agriculture and how it shaped history overall, also you get tons of feedback on drafts for essays so the grading is nice :)",
+                    "url": "https://www.reddit.com/r/UIUC/comments/j5s7d4/comment/g8a07lg/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-10-10 02:12:04 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "BTW",
+            "code": "250",
+            "name": "Principles Bus Comm",
+            "comments": [
+                {
+                    "content": "Really depends on the instructor - I had a guy who was very strict on being punctual to class and all plus he had all these weekly quizzes, gave out hella printed materials (like 5 per lecture) and midterms. I switched immediately to another instructor who was just literally the opposite - all chill with the deadlines (within reasonable line) and the best part was that the class was taught in ways that I actually learned a lot from it.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1i0zd4u/comment/m72460e/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2025-01-14 06:14:13 UTC"
+                },
+                {
+                    "content": "BTW250 is pretty easy.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1h8ajsm/comment/m0s3icp/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-12-06 22:31:08 UTC"
+                },
+                {
+                    "content": "Grohens is an easy teacher, boring as hell tho. Also he takes forever to grade anything, although you get a chance to redo everything at the end.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/i318vi/comment/g09gc4j/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-08-03 22:00:17 UTC"
+                },
+                {
+                    "content": "I took BTW 250 last semester online and it was pretty easy. Everything was in Moodle, Zoom meetings were once a week and there were weekly assignments/quizzes but they weren't that hard. We also had peer editing every week. I think the grading depends on the teacher, but I had Gilmore and he was a bit strict with it. Ended up with an A though.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/mwynjv/comment/gvl5gad/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-04-23 17:11:28 UTC"
+                },
+                {
+                    "content": "I highly suggest Lee McGuire. Chill, nice dude. He doesn't give out 100% (the rest of the sub can agree with me) tho, but class was a good experience.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/gwpd2q/comment/fswv2mn/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-06-04 22:53:15 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "SOCW",
+            "code": "300",
+            "name": "Diversity: Identities & Issues",
+            "comments": [
+                {
+                    "content": "It's a really educational class that makes you understand your own biases. The courseload is focused on essay writing, and 2-3 of those essays are about a required interview with someone who is different from you in some way/shape/form. When I took it the prof was incredibly understanding and would work with you if you needed help. It's a heavier courseload for social work classes with probably multiple in class writings, a presentation, and 6 essay. If you're good at essays, you should be fine. Of all advanced comps, it's probably the easiest.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/jqi5ih/comment/gbo5ahn/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-11-09 00:29:01 UTC"
+                },
+                {
+                    "content": "Carter-Black is pretty chill. The course was pretty easy imo, but it really allows you to see different perspectives. The essays are mostly about yourself and your viewpoints on things so they are pretty enjoyable EDIT: courseload-wise, there's a few large essays (2-3 pages and a 6 page final paper iirc) and a few small paragraph responses every couple of weeks",
+                    "url": "https://www.reddit.com/r/UIUC/comments/jqi5ih/comment/gboc7ul/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-11-09 01:34:58 UTC"
+                },
+                {
+                    "content": "SOCW 300 is a pretty highly recommended class, both because of the content and the instructor. I took it as a social work student but the class was a nice mix of students with lots of interesting discussion. The work load isn't terrible if I remember, mostly papers obviously, and I'm pretty bias towards social work in general:)",
+                    "url": "https://www.reddit.com/r/UIUC/comments/muacac/comment/gv5ctsd/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-04-20 00:40:52 UTC"
+                },
+                {
+                    "content": "SOCW 300: required a bit of work (not much tbh) but was easy grading wise",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1hwnm2r/comment/m62g1mo/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2025-01-08 16:10:10 UTC"
+                }
+            ]
+        }
     ],
-    ...
+    "Cultural Studies: Western/Comparative": [
+        {
+            "subject": "MACS",
+            "code": "100",
+            "name": "Intro to Popular TV & Movies",
+            "comments": [
+                {
+                    "content": "i took macs 100 it was super easy",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1481akv/comment/jnyjl8t/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-06-13 03:26:51 UTC"
+                },
+                {
+                    "content": "I had professor Jonathan Knipp. Asynchronous lecture with in person discussion. 3 papers (less than 2 pages each), 2 midterms (second one is your final and only includes content after midterm 1), group media project, discussion grade. HW is to read/watch lecture vids and an assigned movie/TV screening. Exams have study guides which contain most of everything you'll need on the exam (exams are open book, open note and you can search e text as needed). Should be an easy A if you put in effort.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/zr4ii4/comment/j12p4k9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-12-21 05:48:48 UTC"
+                },
+                {
+                    "content": "I just finished it this semester and it's free. Not sure if it's the same way this spring semester but mine was completely async.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/zr4ii4/comment/j11n7f1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-12-21 00:31:44 UTC"
+                },
+                {
+                    "content": "took it last spring semester, so the second half was online. Easy A , i recommend (3 writing assignments, and 1 was in place of the usual movie project) I am assuming they still aren't doing the group movie project since everything is online so you should be good",
+                    "url": "https://www.reddit.com/r/UIUC/comments/k5ldtd/comment/gegk8tm/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-12-03 05:32:36 UTC"
+                },
+                {
+                    "content": "Really easy A class! Loved the professor. Knipp was very understanding and we only had about 2 exams. Discussion meetings were mandatory. Instead of the project, we took two mini quizzes. Very doable & easy class.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/k5ldtd/comment/giyvv1b/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-01-12 04:42:57 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "DANC",
+            "code": "100",
+            "name": "Intro to Contemporary Dance",
+            "comments": [
+                {
+                    "content": "This was one of the easiest classes ever. We all took it just for a gpa bump",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1cyh1he/comment/l5agrx5/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-05-23 07:05:33 UTC"
+                },
+                {
+                    "content": "Beware danc 100 requires actual dancing but it's pretty simple",
+                    "url": "https://www.reddit.com/r/UIUC/comments/v0rn5b/comment/iaiduo8/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-05-30 04:40:41 UTC"
+                },
+                {
+                    "content": "lolol this class is a joke. I remember doing the final dance 5th floor eceb because I was stuck in lab and forgot to do it. Maximum 2 hrs/week",
+                    "url": "https://www.reddit.com/r/UIUC/comments/fn3m5s/comment/fl82lrc/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-03-22 22:03:02 UTC"
+                },
+                {
+                    "content": "Easy af. Only 3 online submissions throughout the course related to dancing. Does not need to be professional. Most of the classwork/homework is reviewing other dances and commenting on them.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/fn3m5s/comment/fl7z7jo/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-03-22 21:28:45 UTC"
+                },
+                {
+                    "content": "Super easy. If you. Complete everything you'll get an A.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/fn3m5s/comment/fl8qk30/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-03-23 02:17:38 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "MUS",
+            "code": "130",
+            "name": "Music Then and Now",
+            "comments": [
+                {
+                    "content": "I have taken MUS 130 and thoroughly enjoyed it. You are placed in a chamber ensemble with a few other students and prepare a piece throughout the quarter, and perform it at the end of the quarter. I would try to practice for the class at least an hour a day, although you should spend some of that time doing etudes/scales/solos to improve as a musician.",
+                    "url": "https://www.reddit.com/r/UCSD/comments/16eghyd/comment/jzvez9v/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-09-09 21:49:59 UTC"
+                },
+                {
+                    "content": "MUS130 is great if you are a fan of music. About an hour of lecture videos/week. 6 quizzes (with retakes as many times as you like to get 100%), weekly discussion post w/ two responses, and a final. Pretty low-key and interesting.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/jw24zk/comment/gcom9e4/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-11-18 03:23:29 UTC"
+                },
+                {
+                    "content": "My friend took it and he said it was super easy. He told me that I should take it for an easy Western, so I'm sure he'd say the same to you",
+                    "url": "https://www.reddit.com/r/UIUC/comments/lon7p/comment/c2udgka/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2011-10-25 18:55:44 UTC"
+                },
+                {
+                    "content": "I thought the class was super easy, but I also had 13 years of musical education under my belt before taking it. My friend who took it with me didn't struggle at all with the class and he took it with no musical background. It should be easy.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/lon7p/comment/c2ueuqa/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2011-10-25 21:14:53 UTC"
+                },
+                {
+                    "content": "I took it and really enjoyed it. It was pretty easy. It helps if you're genuinely interested in the music. If you can't appreciate classical/baroque/opera, etc. it might be harder to get through. I definitely recommend it.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/lon7p/comment/c2uebn8/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2011-10-25 20:20:48 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "RST",
+            "code": "242",
+            "name": "Intro to Psychology",
+            "comments": [
+                {
+                    "content": "RST 242 is quite easy if you're good at time managing. For me, I finish the quiz and readings every Monday, ask one question on Tuesday, finish the whole discussion on Packback on Thursday, and on Friday I finish writing the weekly paper. You can also complete the assignment in advance. I did the last 3 weeks' assignments during fall break, so I didn't need to worry about it during the final week.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1histkn/comment/m34b02x/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-12-21 10:39:23 UTC"
+                },
+                {
+                    "content": "For RST 242, each week u have a few readings (never read them lol), 1 discussion post + 4 responses, a quiz (2 tries), and a 300-500 word paper. it all took ~2.5 hours per week. there's also a 500-700 word final paper, which took ~2 hrs for me. Pretty easy A imo, I just had to sit down and allocate 2 hours to do work once a week.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1histkn/comment/m31djnk/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-12-20 20:52:10 UTC"
+                },
+                {
+                    "content": "Yeah, it's easy. 1 300 word 'paper' a week, 1 discussion post and 4 replies, and a 5 question quiz that you get 2 attempts on. For the discussion posts, they're on packback, so just make sure you get curiosity score over 75 and you're chilling.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/14emwrd/comment/jovqb8h/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-06-20 21:03:29 UTC"
+                },
+                {
+                    "content": "Easy. Just make sure to include the title page on your essays (modeled in the rubric) they're pretty anal about it and you'll get a 0 if it doesn't exist or done incorrectly.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/14emwrd/comment/jowa6dc/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-06-20 23:27:38 UTC"
+                },
+                {
+                    "content": "RST 242 is about the easiest 'easy A' you'll find on campus.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1i0edit/comment/m6xcz7s/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2025-01-13 14:47:45 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "CLCV",
+            "code": "115",
+            "name": "Mythology of Greece and Rome",
+            "comments": [
+                {
+                    "content": "Not very difficult at all. Especially if you find mythology fun. He has a book that has all the assignments, they usually either have you look something up or write something short. You do have to do some reading but I didn't find it to be hard. Lectures are really fun. Overall a nice and fun A if you put some effort in.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/98j6u1/comment/e4gf2m9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2018-08-19 10:07:19 UTC"
+                },
+                {
+                    "content": "It will be about 3-6 hours of work every week (depending on how fast you can read), with two midterms, a final, and three 1250-1500 word essays.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1gvcisx/comment/ly106h5/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-11-20 01:23:34 UTC"
+                },
+                {
+                    "content": "The course is a bit time consuming but it's not too hard to get an A.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1gvcisx/comment/ly3p8sr/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-11-20 14:24:41 UTC"
+                },
+                {
+                    "content": "Take the summer section, easiest course I've ever taken. If you had watched OSP's mythology videos growing up or had read Rick riordan novels you could get like an 80%. The exams were long but if you just went through the learn@Illinois modules and paid attention it was all from there.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1gvcisx/comment/ly4grk9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-11-20 16:52:19 UTC"
+                },
+                {
+                    "content": "my roommates are strugglinggg rn in it bc of the pure quantity of work and very specific requirements for said work",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1gvcisx/comment/ly4cle8/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-11-20 16:30:38 UTC"
+                }
+            ]
+        }
+    ],
+    "Cultural Studies: US Minority": [
+        {
+            "subject": "SHS",
+            "code": "222",
+            "name": "Language & Culture of Deaf Communities",
+            "comments": [
+                {
+                    "content": "I took SHS 222 this semester. It's super easy and only half a semester, and you have a few videos or readings to do each week.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/g4adkj/comment/fnwenoq/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-04-19 17:22:18 UTC"
+                },
+                {
+                    "content": "The course this semester is an absolute mess. There are no lectures. It's just a bunch of readings and YouTube videos. The discussion posts and reflection are a waste of time. In total, you're required to write 900 words per week for the discussion and reflection.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/lcosm1/dont_take_shs_222/",
+                    "time": "2021-02-04 20:10:25 UTC"
+                },
+                {
+                    "content": "I spent like an hour max each day, but depends on the assignment. The quizzes took max 10-15 minutes. The discussions took the longest time to collect and write the information so usually like an hour for me, but you could finish in 30 mins really. The reflections also in like 10 mins max. So I spent three days per week on these assignments for not more than 2 hours per week.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1hrw227/comment/m518rjf/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2025-01-02 17:06:07 UTC"
+                },
+                {
+                    "content": "It's not hard just a lot of busy work which you can all find on various quizlets lets posted online. Remember to keep track of due dates!",
+                    "url": "https://www.reddit.com/r/UIUC/comments/twhv9m/comment/i3fvdm2/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-04-05 02:36:13 UTC"
+                },
+                {
+                    "content": "So much busy work, but the work combined in a week will take like 30 minutes max. The quizzes are doable. The grading depends on the grader and if they take the class that seriously.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1i9goue/comment/m91vpo5/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2025-01-25 06:18:31 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "ACE",
+            "code": "255",
+            "name": "Economics of Food and Environmental Justice",
+            "comments": [
+                {
+                    "content": "I took ACE 255 last year (Econ of food) and it was actually the easiest fucking class in the world. Just pull up to lectures and you'll get an A. You literally only have to do like one or two assignments the entire semester",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1egah5x/comment/lfsz3fm/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-07-31 12:42:34 UTC"
+                },
+                {
+                    "content": "The problem with 'Justice' classes is that they bring up history and how we got to where we are. I say this because as a person who's taken a lot of classes with food and environmental and agriculture and other law/justice classes, there was overlap plus the fact that you go over things that you already know, or maybe didn't know, and that it's still a problem to this day. So all in all it wasn't a complete waste of time like some classes may be",
+                    "url": "https://www.reddit.com/r/UIUC/comments/qqx0o7/comment/hkebj7v/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-11-13 00:01:36 UTC"
+                },
+                {
+                    "content": "ace 255 - only packback discussions, some short assignments, super short mc quizzes with multiple attempts",
+                    "url": "https://www.reddit.com/r/UIUC/comments/yjdqy9/comment/iut5t66/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-11-02 20:51:40 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "CLCV",
+            "code": "224",
+            "name": "Greco-Roman Antiquity and US Minority Cultures",
+            "comments": [
+                {
+                    "content": "previously there was no homework aside from assigned readings (probably about 10-15 pages per class twice a week, no extra assigned readings for discussion section) and most of your points came from exams and attendance.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1i0edit/comment/m7100ge/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2025-01-14 01:55:12 UTC"
+                },
+                {
+                    "content": "Its easy average grade fall 2024 was 90.5% and they removed the Final Project this sem, basically just read a bit",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1i9an0y/comment/m90fypp/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2025-01-25 00:39:41 UTC"
+                },
+                {
+                    "content": "Im in it rn all u basically gotta do is read or understanding the readings theres no projects / assignments basically just discussion attendence/quizzes then exams Average grade fall 2024 was 90.5%",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1icbz17/comment/m9pdx3h/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2025-01-28 21:02:42 UTC"
+                },
+                {
+                    "content": "This class is extremely easy don't be intimidated. I probably did 45 minutes of work a week and got an A. You don't really need to watch the lectures completely or do the resdingd",
+                    "url": "https://www.reddit.com/r/UIUC/comments/s7tyn1/comment/htc3efq/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-01-19 16:36:06 UTC"
+                },
+                {
+                    "content": "It seems really easy so far to be honest. Technically it's a lot of readings but in reality, you just need to skim Schmoop so you aren't lost in discussion (basically everyone does this), show up to lectures for pop quizzes which Soloman literally gives the answers to, occasionally do some short assignments that take at most 30 minutes to an hour, and have exams here and there that are either term memorization or essay style where they give the prompt beforehand. On top of this, there's EC and the cutoffs for an A are lowered. ",
+                    "url": "https://www.reddit.com/r/UIUC/comments/fmtjch/comment/fl8df48/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-03-22 23:52:35 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "MUS",
+            "code": "132",
+            "name": "Popular Music Studies",
+            "comments": [
+                {
+                    "content": "Lectures not required but the quiz information basically only came from lecture/readings. You could still do fairly well on the quizzes though since you have two tries. Discussion was mandatory but there is an online section that does discussion post. Exams were easy, essays pretty easy, and I never did a single reading and got an A+. Also a lot of extra credit",
+                    "url": "https://www.reddit.com/r/UIUC/comments/190gj9u/comment/kgo7oy1/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-01-07 02:04:18 UTC"
+                },
+                {
+                    "content": "t's all online and everything is pretty easy. because the winter semester is like 4 weeks long, i have to do 2 modules each week (both due on friday's), but it's not bad at all. for one module, there's a content and listening quiz, which are all open note. you can get out of the listening quiz if you attend zoom sessions that the professor holds, but ive never been to one. ",
+                    "url": "https://www.reddit.com/r/UIUC/comments/190gj9u/comment/kgovx32/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-01-07 04:55:50 UTC"
+                },
+                {
+                    "content": "Music is easier when you master and keep practicing those terms.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1f9u53d/comment/lloaowe/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-09-05 19:10:02 UTC"
+                },
+                {
+                    "content": "I got an A in the class and still don't understand what melody, harmony, tempo or beat is . You don't need to know you will be fine.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/1f9u53d/comment/llof5oy/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2024-09-05 19:33:42 UTC"
+                },
+                {
+                    "content": "MUS 132 is a fun class especially if you like listening to music (who doesn't).",
+                    "url": "https://www.reddit.com/r/UIUC/comments/tr6rcr/comment/i2lrpky/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2022-03-29 19:29:50 UTC"
+                }
+            ]
+        },
+        {
+            "subject": "THEA",
+            "code": "110",
+            "name": "Broadway Musicals",
+            "comments": [
+                {
+                    "content": "The professor is super chill and the TAs are incredibly understanding. The class is minimal effort too; if you pay attention during lectures the exams are a breeze. The essays are really easy as well; there's 3 of them and 2 of them are based on your opinion. There's also no final for the class! ",
+                    "url": "https://www.reddit.com/r/UIUC/comments/14grc82/comment/jp73vdd/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2023-06-23 07:45:51 UTC"
+                },
+                {
+                    "content": "Really easy class and also fun. You need to watch a musical though, I found that fun but it depends on the person",
+                    "url": "https://www.reddit.com/r/UIUC/comments/pa30iy/comment/ha1sp23/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2021-08-23 16:32:48 UTC"
+                },
+                {
+                    "content": "The mandatory performance viewing this semester was the student's choice of 5 different musicals available online. They're all about 2 and a half hours, but I think the selections depend on which TA you get? In general, the class was very easy and had a light workload.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/k411fk/comment/ge67uy3/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2020-11-30 18:32:11 UTC"
+                },
+                {
+                    "content": "110 only has 3 exams and they are done in class.",
+                    "url": "https://www.reddit.com/r/UIUC/comments/dt6ow3/comment/f6v0db4/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+                    "time": "2019-11-08 00:34:19 UTC"
+                }
+            ]
+        }
+    ]
+
+
 }

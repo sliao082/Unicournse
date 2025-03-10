@@ -4,8 +4,11 @@ import { onAuthStateChanged } from 'firebase/auth';
 import auth from '../../util/auth';
 import db from '../../util/db';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
-import HomeBrowseSubjectsCard from '../HomeBrowseSubjectsCard/HomeBrowseSubjectsCard';
+
 import './style.css'
+import collegeData from '../../content/college.json';
+import subjectData from '../../content/subject.json';
+import courseData from '../../content/courses.json';
 
 const UserProfile = () => {
     const [user, setUser] = useState(null);
@@ -36,7 +39,9 @@ const UserProfile = () => {
         fetchProfileData();
     }, [user]);
 
-    const handleDeleteSection = async (courseTitle, sectionCode) => {
+    const handleDeleteSection = async (e, courseTitle, sectionCode) => {
+        e.preventDefault();
+        e.stopPropagation();
         if (
             !window.confirm(
                 `Are you sure you want to delete section ${sectionCode} from ${courseTitle}?`
@@ -82,6 +87,15 @@ const UserProfile = () => {
         );
     }
 
+    const getCollegeColor = (code, color) => {
+        const subject = subjectData.find(subject => subject.code === code);
+        if (subject) {
+            const college = collegeData.find(college => college.college === subject.college);
+            return college ? college[color] : '';
+        }
+        return '';
+    }
+
     return (
         <>
             <div className="user-main-block">
@@ -92,7 +106,7 @@ const UserProfile = () => {
                         <div className="user-pf-img"></div>
                     </div>
                 </div>
-                <div className="user-profile-main-info" style={{ width: '76%' }}>
+                <div className="user-profile-main-info">
                     <div className="user-profile-info-item" style={{ width: '22%' }}>
                         <p className="user-profile-info-label">Gender:</p>
                         <p className="user-profile-info-value">{profileData?.info?.gender || "N/A"}</p>
@@ -124,74 +138,77 @@ const UserProfile = () => {
                 </div>
                 <div className="user-main-courses">
                     <h2>
-                        Your Sections ({profileData?.courses?.length || 0})&nbsp;
-                        <span onClick={() => setDeletionMode((prev) => !prev)}>Delete</span>
+                        Your Sections&nbsp;
+                        {profileData?.courses?.length > 0 && (
+                            <span onClick={() => setDeletionMode((prev) => !prev)}>Delete</span>
+                        )}
                     </h2>
-                    <div className="browse-subjects-list" style={{ justifyContent: 'center', margin: '0', gap: '4dvh 2.5%' }}>
+                    <div className="user-profile-browse-subjects-list">
                         {profileData?.courses &&
                             (() => {
                                 const allCards = profileData.courses.flatMap((course, courseIndex) => {
                                     if (course.sections && course.sections.length > 0) {
                                         return course.sections.map((section, sectionIndex) => (
-                                            <div key={`${courseIndex}-${sectionIndex}`} className="browse-subjects-card" style={{ width: '26%', minHeight: '150px' }}>
-                                                <div className="browse-subjects-card-circle browse-subjects-card-circle-1" style={{ backgroundColor: 'var(--details-color-2)' }}></div>
-                                                <div className="browse-subjects-card-circle browse-subjects-card-circle-2" style={{ backgroundColor: '#46dde963' }}></div>
+                                            <Link to={`/browse/subject/${course.course.split(' ')[0]}/${course.course.split(' ')[1]}`} key={`${courseIndex}-${sectionIndex}`} className="user-profile-browse-subjects-card">
+                                                <div className="browse-subjects-card-circle browse-subjects-card-circle-1" style={{ backgroundColor: getCollegeColor(course.course.split(' ')[0], 'color1') }}></div>
+                                                <div className="browse-subjects-card-circle browse-subjects-card-circle-2" style={{ backgroundColor: getCollegeColor(course.course.split(' ')[0], 'color2') }}></div>
                                                 <div className="user-profile-browse-subjects-section">
                                                     <p className="user-profile-browse-subjects-section-title">{course.course}</p>
-                                                    <div className="user-profile-browse-subjects-section-item" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                                    <div className="user-profile-browse-subjects-section-item">
                                                         <p>{section.code} {section.type}</p>
                                                         {deletionMode && (
-                                                            <button className="browse-subjects-card-delete-button"
-                                                                onClick={(e) => {
-                                                                    if (
-                                                                        window.confirm(
-                                                                            `Are you sure you want to delete section ${section.code} from ${course.course}?`
-                                                                        )
-                                                                    ) {
-                                                                        handleDeleteSection(course.course, section.code);
-                                                                    }
-                                                                }}
-                                                            >
+                                                            <button className="browse-subjects-card-delete-button" onClick={(e) => handleDeleteSection(e, course.course, section.code)}>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="var(--button-color)"><path d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"></path></svg>
                                                             </button>
                                                         )}
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         ));
                                     } else {
                                         return (
                                             <Link key={courseIndex} to={`/browse/subject/${course.course.split(' ')[0]}/${course.course.split(' ')[1]}`} className="browse-subjects-card" style={{ width: '26%', minHeight: '150px' }}>
-                                                <div className="browse-subjects-card-circle browse-subjects-card-circle-1" style={{ backgroundColor: 'var(--details-color-2)' }}></div>
-                                                <div className="browse-subjects-card-circle browse-subjects-card-circle-2" style={{ backgroundColor: '#46dde963' }}></div>
+                                                <div className="browse-subjects-card-circle browse-subjects-card-circle-1" style={{ backgroundColor: getCollegeColor(course.course.split(' ')[0], 'color1') }}></div>
+                                                <div className="browse-subjects-card-circle browse-subjects-card-circle-2" style={{ backgroundColor: getCollegeColor(course.course.split(' ')[0], 'color2') }}></div>
                                                 <p className="browse-subjects-card-text">{course.course}</p>
                                             </Link>
                                         );
                                     }
                                 });
-                                return allCards.slice(currentPage * 6, currentPage * 6 + 6);
+                                return allCards.length > 0 
+                                    ? allCards.slice(currentPage * 6, currentPage * 6 + 6)
+                                    : <p className="no-info-text">You haven't added any sections yet. Why not <Link to='/browse'>browse courses</Link> and add some?</p>;
                             })()}
-                        <button className="user-browse-section-btn" type="button" onClick={() => setCurrentPage((prev) => prev - 1)} disabled={currentPage === 0}>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="var(--text-color)"><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path></svg>
-                        </button>
-                        <button className="user-browse-section-btn" type="button" onClick={() => setCurrentPage((prev) => prev + 1)} disabled={(currentPage + 1) * 6 >= totalCards}>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="var(--text-color)"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path></svg>
-                        </button>
+                        {profileData?.courses?.length > 0 && (
+                            <>
+                                <button className="user-browse-section-btn" type="button" onClick={() => setCurrentPage((prev) => prev - 1)} disabled={currentPage === 0}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="var(--text-color)"><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path></svg>
+                                </button>
+                                <button className="user-browse-section-btn" type="button" onClick={() => setCurrentPage((prev) => prev + 1)} disabled={(currentPage + 1) * 6 >= totalCards}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="var(--text-color)"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path></svg>
+                                </button>
+                            </>
+                        )}
                     </div>
                 </div>
                 <div className="user-side-info-block">
                     <h2>WatchList</h2>
                     <div className="user-side-info">
                         {profileData?.watchlist && profileData.watchlist.length > 0 ? (
-                            profileData.watchlist.map((item, index) => (
-                                <div key={index} className="course-list-item unclicked" style={{ width: '92%', marginTop: '3dvh' }}>
-                                    <div className="course-icon"></div>
-                                    <div className="course-details">
-                                        <h3>{item.name}</h3>
-                                        <p>{item.course}</p>
-                                    </div>
-                                </div>
-                            ))
+                            profileData.watchlist.map((courseId) => {
+                                const [subj, codeStr] = courseId.split(" ");
+                                const code = Number(codeStr);
+                                const course = courseData.find((item) => item.subj === subj && item.code === code);
+                                return (
+                                    <Link to={`../../browse/subject/${subj}`} key={courseId} className="course-list-item unclicked" style={{ width: '92%', marginTop: '3dvh' }}>
+                                        <div className="course-icon"></div>
+                                        <div className="course-details">
+                                            <h3>{course.name}</h3>
+                                            <p>{course.subj} {course.code}</p>
+                                        </div>
+                                    </Link>
+                                );
+                            })
                         ) : (
                             <p className="no-info-text" style={{ textAlign: 'center', fontSize: '.9rem', marginTop: '2dvh' }}>
                                 It looks like you have no courses listed as watchlist. Why not <Link to='/browse'>browse courses</Link> and add some?

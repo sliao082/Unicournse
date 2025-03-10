@@ -58,18 +58,6 @@
     transform: translateX(4px);
 }
 
-/* .browse-details-info-gpa {
-    aspect-ratio: 1 / 1;
-    height: 90%;
-    margin-right: 2dvw;
-}
-
-.browse-details-info-gpa h3 {
-    font-size: 1.3rem;
-    color: var(--details-color-2);
-    font-weight: 700;
-} */
-
 .browse-details-headings {
     width: 100%;
     height: fit-content;
@@ -80,6 +68,52 @@
     font-size: 1.8rem;
     color: var(--text-color);
     font-weight: 600;
+}
+
+.browse-details-comment-input {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.browse-details-comment-input input[type="text"] {
+    width: calc(95% - 34px - 20px);
+    height: fit-content;
+    border-radius: 10px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-family: 'Mona Sans', sans-serif;
+    box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px #fff;
+    background: var(--card-background-color);
+}
+
+.browse-details-comment-input input[type="text"]::placeholder {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+    font-weight: 300;
+    font-style: italic;
+}
+
+.browse-details-comment-input button {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background: var(--card-background-color);
+    box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px #fff;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.browse-details-comment-input button:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 8px #fff, -4px -4px 8px var(--shadow-color);
 }
 
 .browse-details-subinfo {
@@ -194,7 +228,12 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #c4c4c4;
+    background-color: #ededfa;
+    background-image: url('../../assets/user_none.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 84%;
+    box-shadow: -2px -2px 4px #fff, 2px 2px 4px var(--shadow-color);
     margin-right: 10px;
 }
 

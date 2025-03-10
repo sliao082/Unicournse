@@ -13,6 +13,10 @@
     z-index: 2;
 }
 
+.register-block form {
+    position: relative;
+}
+
 .register-block h2 {
     margin-bottom: 20px;
     color: var(--text-color);
@@ -37,6 +41,50 @@
 
 .input-group input::placeholder {
     color: var(--secondary-text-color);
+}
+
+.password-requirements-block {
+    visibility: hidden;
+    position: absolute;
+    top: 165px;
+    left: calc(100% + 20px);
+    width: 100%;
+    text-align: left;
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px #fff;
+    border-radius: 8px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.1s ease, visibility 0.1s ease;
+}
+
+.password-requirements-block.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.password-requirements-block h4 {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.password-requirements-block ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.password-requirements-block ul li {
+    width: 100%;
+    /* color: var(--text-color); */
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
 }
 
 .register-btn {

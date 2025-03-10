@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './style.css';
 import auth from '../../util/auth';
 import db from '../../util/db';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { onAuthStateChanged } from 'firebase/auth';
+
+import './style.css';
+import coursesData from '../../content/courses.json';
 
 const UserComments = () => {
+    const [user, setUser] = useState(null);
     const [comments, setComments] = useState([]);
     const [editModalOpen, setEditModalOpen] = useState(false);
     const [currentEditComment, setCurrentEditComment] = useState(null);
 
     const fetchComments = async () => {
-        const currentUser = auth.currentUser;
-        if (!currentUser) {
-            return;
-        }
-        const userDocRef = doc(db, 'Users', currentUser.uid);
+        if (!user) return;
+        const userDocRef = doc(db, 'Users', user.uid);
         const docSnap = await getDoc(userDocRef);
         if (docSnap.exists()) {
             const userData = docSnap.data();
@@ -25,13 +26,22 @@ const UserComments = () => {
     };
 
     useEffect(() => {
-        fetchComments();
+        const unsubscribe = onAuthStateChanged(auth, (userData) => {
+            setUser(userData);
+        });
+        return () => unsubscribe();
     }, []);
+
+    useEffect(() => {
+        if (user) {
+            fetchComments();
+        }
+    }, [user]);
 
     const formatTimestamp = (timestamp) => {
         if (!timestamp) return '';
         const date = new Date(timestamp.seconds * 1000);
-        return date.toISOString().split('T')[0];
+        return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
     };
 
     const handleEditClick = (comment) => {
@@ -47,9 +57,8 @@ const UserComments = () => {
     const handleModalSave = async () => {
         const newContent = document.getElementById('edit-textarea').value.trim();
         if (newContent === "") return;
-        const currentUser = auth.currentUser;
-        if (!currentUser) return;
-        const userDocRef = doc(db, 'Users', currentUser.uid);
+        if (!user) return;
+        const userDocRef = doc(db, 'Users', user.uid);
         const docSnap = await getDoc(userDocRef);
         if (docSnap.exists()) {
             const userData = docSnap.data();
@@ -60,7 +69,7 @@ const UserComments = () => {
                 }
                 return c;
             });
-            await updateDoc(userDocRef, { "comments": updatedComments });
+            await updateDoc(userDocRef, { comments: updatedComments });
             setComments(updatedComments);
             setEditModalOpen(false);
             setCurrentEditComment(null);
@@ -68,16 +77,17 @@ const UserComments = () => {
     };
 
     const handleDeleteClick = async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         const commentId = Number(e.currentTarget.getAttribute('data-comment-id'));
-        const currentUser = auth.currentUser;
-        if (!currentUser) return;
-        const userDocRef = doc(db, 'Users', currentUser.uid);
+        if (!user) return;
+        const userDocRef = doc(db, 'Users', user.uid);
         const docSnap = await getDoc(userDocRef);
         if (docSnap.exists()) {
             const userData = docSnap.data();
             const commentsArray = userData?.comments || [];
             const updatedComments = commentsArray.filter(c => c.id !== commentId);
-            await updateDoc(userDocRef, { "comments": updatedComments });
+            await updateDoc(userDocRef, { comments: updatedComments });
             setComments(updatedComments);
         }
     };
@@ -96,11 +106,11 @@ const UserComments = () => {
                         </div>
                     ) : (
                         comments.map((comment) => (
-                            <div key={comment.id} className="comment-card">
+                            <Link key={comment.id} className="comment-card" to={`/browse/subject/${comment.course.split(' ')[0]}/${comment.course.split(' ')[1]}`}>
                                 <div className="comment-content">
                                     <div className="course-header">
                                         <h3 className="course-code">{comment.course}</h3>
-                                        <span className="course-title">{comment.name}</span>
+                                        <span className="course-title">{coursesData.find(course => course.subj === comment.course.split(' ')[0] && course.code === Number(comment.course.split(' ')[1]))?.name || 'Unknown Course'}</span>
                                     </div>
                                     <p className="comment-text">{comment.content}</p>
                                     <div className="comment-date">
@@ -119,16 +129,15 @@ const UserComments = () => {
                                         </svg>
                                     </button>
                                 </div>
-                            </div>
+                            </Link>
                         ))
                     )}
                 </div>
             </div>
             {editModalOpen && currentEditComment && (
                 <div className="modal-overlay">
-                    <div className="neumorphic-modal">
+                    <div className="comment-modal">
                         <h3>{currentEditComment.course}</h3>
-                        <h4>{currentEditComment.name}</h4>
                         <textarea id="edit-textarea" defaultValue={currentEditComment.content}></textarea>
                         <p>Posted on: {formatTimestamp(currentEditComment.date)}</p>
                         <div className="modal-buttons">
@@ -142,4 +151,4 @@ const UserComments = () => {
     );
 };
 
-export default UserComments
+export default UserComments;

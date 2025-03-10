@@ -66,6 +66,25 @@
     color: var(--text-color);
     margin-bottom: 10px;
     line-height: 23px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.browse-info-attr svg {
+    margin-left: 8px;
+    transition: .25s ease;
+}
+
+.browse-info-attr svg:hover {
+    cursor: pointer;
+    fill: var(--button-color);
+}
+
+.browse-info-attr h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: .25s ease;
+    margin-left: 4px;
 }
 
 .browse-info-desc {

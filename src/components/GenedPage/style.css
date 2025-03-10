@@ -1,0 +1,166 @@
+.gened-section {
+    width: 100%;
+    height: calc(100vh - var(--nav-bar-height));
+    overflow-y: scroll;
+}
+
+.gened-section::-webkit-scrollbar {
+    display: none;
+}
+
+.gened-section {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.gened-block {
+    width: 100%;
+    padding: 10px 5vw;
+    margin-bottom: 8dvh;
+}
+
+.gened-block-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.gened-block-header h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.gened-block-header svg {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 6px var(--shadow-color), -3px -3px 6px #fff;
+}
+
+.gened-block-content {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.gened-block-content-item {
+    background: var(--card-background-color);
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px #fff;
+    overflow: hidden;
+    transition: 0.25s ease;
+}
+
+.gened-block-content-item:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 8px #fff, -4px -4px 8px var(--shadow-color);
+}
+
+.course-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.course-info {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.25s ease;
+}
+
+.arrow-icon.expanded {
+    transform: rotate(180deg);
+}
+
+.expanded-block {
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    background: var(--card-background-color);
+    border-top: 1px solid var(--shadow-color);
+    animation: expandDown 0.3s ease-out;
+}
+
+.expanded-title {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.gened-comments-row {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+    padding: 10px;
+    overflow-x: scroll;
+    flex-wrap: wrap;
+}
+
+.gened-comment-card {
+    width: calc(20% - 16px);
+    height: fit-content;
+    background: var(--card-background-color);
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px #fff;
+    padding: 30px;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.gened-comment-card:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 8px #fff, -4px -4px 8px var(--shadow-color);
+}
+
+.gened-comment-content {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.gened-comment-source {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.gened-comment-source p {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+.gened-comment-source p a {
+    color: var(--reddit-color);
+}
+
+.gened-comment-source svg {
+    width: 24px;
+    height: 24px;
+}
+
+.gened-comment-source span {
+    font-size: 0.7rem;
+    color: var(--secondary-text-color);
+}
+
+@keyframes expandDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

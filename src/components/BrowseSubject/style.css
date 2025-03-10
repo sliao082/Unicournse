@@ -92,6 +92,7 @@
     text-decoration: none;
     outline: none;
     border: none;
+    padding-right: 10px;
 }
 
 .browse-main-code {
@@ -148,7 +149,7 @@
     align-items: flex-start;
     flex-direction: column;
     flex-shrink: 0;
-    margin-bottom: 5dvh;
+    margin-bottom: 80px;
 }
 
 .browse-filter-list-item {
